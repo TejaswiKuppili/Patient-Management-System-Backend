@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PatientManagementSystem.Common\PatientManagementSystem.Common.csproj" />
+    <ProjectReference Include="..\PatientManagementSystem.Repository\PatientManagementSystem.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
