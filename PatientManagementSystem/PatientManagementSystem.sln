@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{6A17E6AD-D024-4450-A7A5-6A3517F52B7A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{0E8E788F-F6C6-4CBC-8E27-474123E89A09}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A79B1C71-E671-42DE-BF19-4694286A7955}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Common", "..\PatientManagementSystem.Common\PatientManagementSystem.Common.csproj", "{BEDEB82B-5BB1-4706-8985-A9549D0BE424}"
