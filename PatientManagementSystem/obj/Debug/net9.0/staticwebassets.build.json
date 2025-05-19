@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "iChd5VZkcg3ZUigTdW4DYaIr81gLXIZcirErrUEF3A8=",
+  "Source": "PatientManagementSystem",
+  "BasePath": "_content/PatientManagementSystem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
