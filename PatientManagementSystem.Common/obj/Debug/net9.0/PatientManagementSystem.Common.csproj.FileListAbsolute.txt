@@ -1,0 +1,23 @@
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfoInputs.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfo.cs
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.CoreCompileInputs.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.deps.json
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.pdb
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
+F:\PMS-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.deps.json
+F:\PMS-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.dll
+F:\PMS-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.pdb
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfoInputs.cache
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfo.cs
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.CoreCompileInputs.cache
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.sourcelink.json
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.dll
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll

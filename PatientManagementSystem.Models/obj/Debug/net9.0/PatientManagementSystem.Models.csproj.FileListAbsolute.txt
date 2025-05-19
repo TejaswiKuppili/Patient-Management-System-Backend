@@ -1,0 +1,4 @@
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Models\obj\Debug\net9.0\PatientManagementSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Models\obj\Debug\net9.0\PatientManagementSystem.Models.AssemblyInfoInputs.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Models\obj\Debug\net9.0\PatientManagementSystem.Models.AssemblyInfo.cs
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS\PatientManagementSystem.Models\obj\Debug\net9.0\PatientManagementSystem.Models.csproj.CoreCompileInputs.cache
