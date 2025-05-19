@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {}
+    "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {}
   },
   "projects": {
-    "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+    "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+        "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
         "projectName": "PatientManagementSystem.Common",
-        "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
-        "packagesPath": "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\",
-        "outputPath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\obj\\",
+        "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+        "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+        "outputPath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tejaswi Kuppili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -65,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+    "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+        "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
         "projectName": "PatientManagementSystem.Data",
-        "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
-        "packagesPath": "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\",
-        "outputPath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\obj\\",
+        "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+        "outputPath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tejaswi Kuppili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,11 +96,7 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-                "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -113,7 +109,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -156,24 +152,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {
+    "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
-        "projectName": "PatientManagementSystemAPI",
-        "projectPath": "F:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
-        "packagesPath": "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\",
-        "outputPath": "F:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
+        "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
+        "projectName": "PatientManagementSystem.Repository",
+        "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
+        "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+        "outputPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tejaswi Kuppili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,11 +184,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-                "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
-              },
-              "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
-                "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+              "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
               }
             }
           }
@@ -207,7 +200,157 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
+        "projectName": "PatientManagementSystem.Services",
+        "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
+        "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+        "outputPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+              },
+              "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+        "projectName": "PatientManagementSystemAPI",
+        "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+        "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+        "outputPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+              },
+              "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+              },
+              "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+              },
+              "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+                "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -253,7 +396,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 using PatientManagementSystem.Data.Entities;
 
 
-namespace PatientManagementSystem.Data
+namespace PatientManagementSystem.Data.DataContext
 {
     public class ApplicationDbContext : DbContext
     {

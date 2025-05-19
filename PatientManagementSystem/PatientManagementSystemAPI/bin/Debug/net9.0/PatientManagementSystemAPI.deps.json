@@ -13,7 +13,9 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.5",
           "PatientManagementSystem.Common": "1.0.0",
-          "PatientManagementSystem.Data": "1.0.0"
+          "PatientManagementSystem.Data": "1.0.0",
+          "PatientManagementSystem.Repository": "1.0.0",
+          "PatientManagementSystem.Services": "1.0.0"
         },
         "runtime": {
           "PatientManagementSystemAPI.dll": {}
@@ -1031,12 +1033,9 @@
         }
       },
       "PatientManagementSystem.Common/1.0.0": {
-        "dependencies": {
-          "PatientManagementSystem.Data": "1.0.0"
-        },
         "runtime": {
           "PatientManagementSystem.Common.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1048,7 +1047,30 @@
         },
         "runtime": {
           "PatientManagementSystem.Data.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PatientManagementSystem.Repository/1.0.0": {
+        "dependencies": {
+          "PatientManagementSystem.Data": "1.0.0"
+        },
+        "runtime": {
+          "PatientManagementSystem.Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PatientManagementSystem.Services/1.0.0": {
+        "dependencies": {
+          "PatientManagementSystem.Common": "1.0.0",
+          "PatientManagementSystem.Repository": "1.0.0"
+        },
+        "runtime": {
+          "PatientManagementSystem.Services.dll": {
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1634,6 +1656,16 @@
       "sha512": ""
     },
     "PatientManagementSystem.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatientManagementSystem.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatientManagementSystem.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

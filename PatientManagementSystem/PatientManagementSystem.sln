@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystemAPI", "PatientManagementSystemAPI\PatientManagementSystemAPI.csproj", "{E2AFAF45-9833-4A46-86F2-01ED838E52CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Repository", "PatientManagementSystem.Repository\PatientManagementSystem.Repository.csproj", "{6480C204-D59C-41B8-B207-C7B902C8707E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Services", "PatientManagementSystem.Services\PatientManagementSystem.Services.csproj", "{932B7FB2-5571-407A-9D0A-F324BA410DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{E2AFAF45-9833-4A46-86F2-01ED838E52CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2AFAF45-9833-4A46-86F2-01ED838E52CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2AFAF45-9833-4A46-86F2-01ED838E52CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6480C204-D59C-41B8-B207-C7B902C8707E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6480C204-D59C-41B8-B207-C7B902C8707E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6480C204-D59C-41B8-B207-C7B902C8707E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6480C204-D59C-41B8-B207-C7B902C8707E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +51,7 @@ Global
 		{BEDEB82B-5BB1-4706-8985-A9549D0BE424} = {A79B1C71-E671-42DE-BF19-4694286A7955}
 		{E6262E48-41FB-4F6F-9AC3-DC053CD21CF1} = {A79B1C71-E671-42DE-BF19-4694286A7955}
 		{E2AFAF45-9833-4A46-86F2-01ED838E52CB} = {6A17E6AD-D024-4450-A7A5-6A3517F52B7A}
+		{6480C204-D59C-41B8-B207-C7B902C8707E} = {A79B1C71-E671-42DE-BF19-4694286A7955}
+		{932B7FB2-5571-407A-9D0A-F324BA410DDC} = {A79B1C71-E671-42DE-BF19-4694286A7955}
 	EndGlobalSection
 EndGlobal

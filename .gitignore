@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/PMS-Backend/v17
+/.vs
+/PatientManagementSystem
+/PatientManagementSystem.Common/obj
+/PatientManagementSystem.Data/obj

@@ -20,13 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\PatientManagementSystem.Common\PatientManagementSystem.Common.csproj" />
     <ProjectReference Include="..\..\PatientManagementSystem.Data\PatientManagementSystem.Data.csproj" />
     <ProjectReference Include="..\..\PatientManagementSystem.Data\PatientManagementSystem.Data.csproj" />
+    <ProjectReference Include="..\PatientManagementSystem.Repository\PatientManagementSystem.Repository.csproj" />
+    <ProjectReference Include="..\PatientManagementSystem.Services\PatientManagementSystem.Services.csproj" />
   </ItemGroup>
 
 </Project>
