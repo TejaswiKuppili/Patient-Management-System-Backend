@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using PatientManagementSystem.Common.Enums;
+
 namespace PatientManagementSystem.Data.Entities
 {
     /// <summary>
@@ -21,7 +21,7 @@ namespace PatientManagementSystem.Data.Entities
 
         [Required]
     
-        public Gender Gender { get; set; }  // NVARCHAR(10), NOT NULL
+        public string Gender { get; set; }  // NVARCHAR(10), NOT NULL
 
         [Required]
         [MaxLength(20)]

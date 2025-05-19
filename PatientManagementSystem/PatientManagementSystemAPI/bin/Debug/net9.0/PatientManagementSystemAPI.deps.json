@@ -1031,6 +1031,9 @@
         }
       },
       "PatientManagementSystem.Common/1.0.0": {
+        "dependencies": {
+          "PatientManagementSystem.Data": "1.0.0"
+        },
         "runtime": {
           "PatientManagementSystem.Common.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -1041,8 +1044,7 @@
       "PatientManagementSystem.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.5",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
-          "PatientManagementSystem.Common": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5"
         },
         "runtime": {
           "PatientManagementSystem.Data.dll": {

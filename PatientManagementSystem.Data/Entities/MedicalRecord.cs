@@ -1,4 +1,4 @@
-﻿using PatientManagementSystem.Common.Enums;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace PatientManagementSystem.Data.Entities
@@ -14,7 +14,7 @@ namespace PatientManagementSystem.Data.Entities
         [ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; } = null!; // Navigation
 
-        public RecordType RecordType { get; set; } 
+        public string RecordType { get; set; } 
 
         [MaxLength(300)]
         public string? FilePath { get; set; } // Nullable: File path or URL

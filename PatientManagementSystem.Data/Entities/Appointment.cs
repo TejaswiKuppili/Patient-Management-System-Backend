@@ -1,5 +1,4 @@
-﻿using PatientManagementSystem.Common.Enums;
-
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace PatientManagementSystem.Data.Entities
@@ -25,7 +24,7 @@ namespace PatientManagementSystem.Data.Entities
         public string? Reason { get; set; } // NVARCHAR(300), NULLABLE
 
         [MaxLength(50)]
-        public AppointmentStatus Status { get; set; } 
+        public string Status { get; set; } 
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.Now; // DATETIME, DEFAULT GETDATE()
@@ -33,10 +32,10 @@ namespace PatientManagementSystem.Data.Entities
         [Required]
         //
 
-        public int CreatedBy { get; set; } // FK -> AppUsers.Id
+        public int CreatedBy { get; set; } // FK -> ApplicationUsers.Id
 
         [ForeignKey(nameof(CreatedBy))]
-        public AppUser CreatedByUser { get; set; } // Navigation to AppUser
+        public ApplicationUser CreatedByUser { get; set; } // Navigation to ApplicationUser
         
     }
 }

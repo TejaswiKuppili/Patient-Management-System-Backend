@@ -1598,16 +1598,6 @@
             "rid": "win"
           }
         }
-      },
-      "PatientManagementSystem.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/PatientManagementSystem.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PatientManagementSystem.Common.dll": {}
-        }
       }
     }
   },
@@ -4711,11 +4701,6 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "PatientManagementSystem.Common/1.0.0": {
-      "type": "project",
-      "path": "../PatientManagementSystem.Common/PatientManagementSystem.Common.csproj",
-      "msbuildProject": "../PatientManagementSystem.Common/PatientManagementSystem.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4723,8 +4708,7 @@
       "Microsoft.EntityFrameworkCore >= 9.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.5",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.5",
-      "PatientManagementSystem.Common >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.5"
     ]
   },
   "packageFolders": {
@@ -4758,11 +4742,7 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-              "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

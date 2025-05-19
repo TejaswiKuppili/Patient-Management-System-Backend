@@ -19,15 +19,12 @@ F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSy
 F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.runtimeconfig.json
 F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.dll
 F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.pdb
-F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Common.dll
-F:\PMS-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Common.pdb
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.csproj.AssemblyReference.cache
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.AssemblyInfoInputs.cache
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.AssemblyInfo.cs
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.csproj.CoreCompileInputs.cache
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.sourcelink.json
-F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientM.4869F430.Up2Date
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.dll
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\refint\PatientManagementSystem.Data.dll
 F:\PMS-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.pdb

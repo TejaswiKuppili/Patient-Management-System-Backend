@@ -22,7 +22,7 @@ namespace PatientManagementSystem.Data.Entities
         public string? Description { get; set; } // NVARCHAR(255), NULLABLE
 
         // Navigation property (optional)
-        public ICollection<AppUser> AppUsers { get; set; } = new List<AppUser>();
+        public ICollection<ApplicationUser> ApplicationUsers { get; set; } = new List<ApplicationUser>();
         public ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

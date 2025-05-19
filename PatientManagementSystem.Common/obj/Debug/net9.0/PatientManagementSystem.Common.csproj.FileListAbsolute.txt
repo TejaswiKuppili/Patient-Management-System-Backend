@@ -21,3 +21,7 @@ F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagement
 F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
 F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
 F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
+F:\PMS-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Data.dll
+F:\PMS-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Data.pdb
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.AssemblyReference.cache
+F:\PMS-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientM.C98A0A19.Up2Date

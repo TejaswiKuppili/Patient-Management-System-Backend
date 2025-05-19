@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PatientManagementSystem.Common.Enums;
+
 using PatientManagementSystem.Data.Entities;
 
 
@@ -12,7 +12,7 @@ namespace PatientManagementSystem.Data
         {
         }
 
-        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Patient> Patients { get; set; }
@@ -34,8 +34,8 @@ namespace PatientManagementSystem.Data
                 entity.Property(r => r.Description).HasMaxLength(255);
             });
 
-            // AppUsers
-            modelBuilder.Entity<AppUser>(entity =>
+            // ApplicationUsers
+            modelBuilder.Entity<ApplicationUser>(entity =>
             {
                 entity.HasKey(u => u.Id);
                 entity.HasIndex(u => u.Username).IsUnique();
@@ -45,7 +45,7 @@ namespace PatientManagementSystem.Data
                 entity.Property(u => u.PasswordHash).IsRequired();
                 entity.Property(u => u.CreatedAt).HasDefaultValueSql("GETDATE()");
                 entity.HasOne(u => u.Role)
-                      .WithMany(r => r.AppUsers)
+                      .WithMany(r => r.ApplicationUsers)
                       .HasForeignKey(u => u.RoleId)
                       .OnDelete(DeleteBehavior.NoAction)
                       .IsRequired();
@@ -118,20 +118,21 @@ namespace PatientManagementSystem.Data
                       .IsRequired();
             });
 
-            // Enum conversions
+            //// Enum conversions
             modelBuilder.Entity<Patient>()
                 .Property(p => p.Gender)
-                .HasConversion<string>()
+                //.HasConversion<string>()
                 .IsRequired();
 
             modelBuilder.Entity<Appointment>()
                 .Property(a => a.Status)
-                .HasConversion<string>()
-                .HasDefaultValue(AppointmentStatus.Scheduled);
+                .HasDefaultValue("Scheduled");
+             //   .HasConversion<string>()
+             //   .HasDefaultValue(AppointmentStatus.Scheduled);
 
             modelBuilder.Entity<MedicalRecord>()
-                .Property(mr => mr.RecordType)
-                .HasConversion<string>();
+                .Property(mr => mr.RecordType);
+           //     .HasConversion<string>();
         }
 
     }
