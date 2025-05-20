@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Services", "PatientManagementSystem.Services\PatientManagementSystem.Services.csproj", "{932B7FB2-5571-407A-9D0A-F324BA410DDC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{44CBEDEC-7ECE-4540-AB7B-F1EBD5FF5F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementSystem.Tests", "..\Tests\PatientManagementSystem.Tests\PatientManagementSystem.Tests.csproj", "{C5BE0654-DD2A-41E6-980E-8B20E1261B7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{932B7FB2-5571-407A-9D0A-F324BA410DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5BE0654-DD2A-41E6-980E-8B20E1261B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BE0654-DD2A-41E6-980E-8B20E1261B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BE0654-DD2A-41E6-980E-8B20E1261B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BE0654-DD2A-41E6-980E-8B20E1261B7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +61,6 @@ Global
 		{E2AFAF45-9833-4A46-86F2-01ED838E52CB} = {6A17E6AD-D024-4450-A7A5-6A3517F52B7A}
 		{6480C204-D59C-41B8-B207-C7B902C8707E} = {A79B1C71-E671-42DE-BF19-4694286A7955}
 		{932B7FB2-5571-407A-9D0A-F324BA410DDC} = {A79B1C71-E671-42DE-BF19-4694286A7955}
+		{C5BE0654-DD2A-41E6-980E-8B20E1261B7A} = {44CBEDEC-7ECE-4540-AB7B-F1EBD5FF5F08}
 	EndGlobalSection
 EndGlobal
