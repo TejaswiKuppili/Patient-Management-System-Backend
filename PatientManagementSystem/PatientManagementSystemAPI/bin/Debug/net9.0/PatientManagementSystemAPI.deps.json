@@ -1054,6 +1054,7 @@
       },
       "PatientManagementSystem.Repository/1.0.0": {
         "dependencies": {
+          "PatientManagementSystem.Common": "1.0.0",
           "PatientManagementSystem.Data": "1.0.0"
         },
         "runtime": {

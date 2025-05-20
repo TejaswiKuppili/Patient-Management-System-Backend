@@ -6,7 +6,7 @@ namespace PatientManagementSystem.Services.Interfaces
     /// </summary>
     public interface IUserService
     {
-        Task<IEnumerable<UserDto>> GetUsersWithRolesAsync();
+        Task<UserAndRoleDto> GetUsersAndRolesAsync();
     }
 
 }

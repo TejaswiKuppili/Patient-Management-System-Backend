@@ -21,7 +21,8 @@ namespace PatientManagementSystemAPI.Controllers
         {
             try
             {
-                var users = await userService.GetUsersWithRolesAsync();
+                var users = await userService.GetUsersAndRolesAsync();
+                
                 return Ok(users);
             }
             catch (Exception ex)

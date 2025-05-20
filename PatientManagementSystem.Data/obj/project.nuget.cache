@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2uWWX+QIdzw=",
+  "dgSpecHash": "ApX8uCnTEq8=",
   "success": true,
-  "projectFilePath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+  "projectFilePath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

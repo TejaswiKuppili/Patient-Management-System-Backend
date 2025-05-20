@@ -1,4 +1,5 @@
-﻿using PatientManagementSystem.Data.Entities;
+﻿using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Repository.Interfaces
 {
@@ -7,7 +8,7 @@ namespace PatientManagementSystem.Repository.Interfaces
     /// </summary>
     public interface IUserRepository
     {
-        Task<IEnumerable<ApplicationUser>> GetAllUsersWithRolesAsync();
+        Task<UserAndRoleDto> GetUsersAndRolesAsync();
     }
 
 }

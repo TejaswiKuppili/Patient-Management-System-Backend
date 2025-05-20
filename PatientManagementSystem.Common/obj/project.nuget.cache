@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "faJuNbjF3ts=",
+  "dgSpecHash": "CeLMwrg0Mlc=",
   "success": true,
-  "projectFilePath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+  "projectFilePath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,8 +13,7 @@ namespace PatientManagementSystemAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            Console.WriteLine("Connection string: " + builder.Configuration.GetConnectionString("DefaultConnection"));
-
+            
             // Add DbContext
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

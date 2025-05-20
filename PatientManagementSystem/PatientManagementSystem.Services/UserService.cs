@@ -1,7 +1,8 @@
 ﻿using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
-
+using Microsoft.EntityFrameworkCore;
 using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Data.DataContext;
 namespace PatientManagementSystem.Services
 {
     /// <summary>
@@ -16,26 +17,12 @@ namespace PatientManagementSystem.Services
             this.userRepository = userRepository;
         }
 
-        public async Task<IEnumerable<UserDto>> GetUsersWithRolesAsync()
+        public async Task<UserAndRoleDto> GetUsersAndRolesAsync()
         {
-            try
-            {
-                var users = await userRepository.GetAllUsersWithRolesAsync();
-
-                return users.Select(user => new UserDto
-                {
-                    
-                    Name = user.Username,
-                    Email = user.Email,
-                    RoleName = user.Role?.Name
-                });
-            }
-            catch (Exception ex)
-            {
-                // Log error
-                throw new Exception("An error occurred while mapping users to DTOs.", ex);
-            }
+            return await userRepository.GetUsersAndRolesAsync();
         }
     }
+
+
 
 }

@@ -1659,6 +1659,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "PatientManagementSystem.Common": "1.0.0",
           "PatientManagementSystem.Data": "1.0.0"
         },
         "compile": {
@@ -4856,11 +4857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+      "projectUniqueName": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
       "projectName": "PatientManagementSystemAPI",
-      "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+      "projectPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
       "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-      "outputPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
+      "outputPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4881,17 +4882,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-              "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+            "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+              "projectPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
             },
-            "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
-              "projectPath": "D:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+            "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+              "projectPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
             },
-            "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
-              "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+            "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+              "projectPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
             },
-            "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
-              "projectPath": "D:\\PMS-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
+            "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+              "projectPath": "D:\\PMS-Backend\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
             }
           }
         }

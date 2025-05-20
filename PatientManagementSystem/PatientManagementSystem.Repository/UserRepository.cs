@@ -1,37 +1,55 @@
 ﻿
 using PatientManagementSystem.Data.DataContext;
-using PatientManagementSystem.Data.Entities;
+using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace PatientManagementSystem.Repository
-{
-    /// <summary>
-    /// Repository for accessing user data from the database.
-    /// </summary>
-    public class UserRepository : IUserRepository
+
+    namespace PatientManagementSystem.Repository
     {
-        private readonly ApplicationDbContext context;
-
-        public UserRepository(ApplicationDbContext context)
+        /// <summary>
+        /// Repository for accessing user and role data from the database.
+        /// </summary>
+        public class UserRepository : IUserRepository
         {
-            this.context = context;
-        }
+            private readonly ApplicationDbContext context;
 
-        public async Task<IEnumerable<ApplicationUser>> GetAllUsersWithRolesAsync()
-        {
-            try
+            public UserRepository(ApplicationDbContext context)
             {
-                return await context.ApplicationUsers
-                    .Include(user => user.Role)
-                    .ToListAsync();
+                this.context = context;
             }
-            catch (Exception ex)
+
+            public async Task<UserAndRoleDto> GetUsersAndRolesAsync()
             {
-                // Log exception (consider using your NLogger)
-                throw new Exception("An error occurred while retrieving users with roles.", ex);
+                try
+                {
+                    var users = await context.ApplicationUsers
+                        .Include(user => user.Role)
+                        .ToListAsync();
+
+                    var userDtos = users.Select(user => new UserDto
+                    {
+                        Name = user.Username,
+                        Email = user.Email,
+                        RoleName = user.Role?.Name
+                    }).ToList();
+
+                    var allRoles = await context.Roles
+                        .Select(r => r.Name)
+                        .ToListAsync();
+
+                    return new UserAndRoleDto
+                    {
+                        Users = userDtos,
+                        Roles = allRoles
+                    };
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("An error occurred while retrieving users and roles.", ex);
+                }
             }
         }
     }
 
-}
+
