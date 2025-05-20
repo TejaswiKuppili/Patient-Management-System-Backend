@@ -20,11 +20,11 @@ namespace PatientManagementSystemAPI
 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowReactApp", policy =>
+                options.AddPolicy("AllowFrontend", builder =>
                 {
-                    policy.WithOrigins("http://localhost:3000")
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:3000")
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
                 });
             });
 
@@ -35,11 +35,11 @@ namespace PatientManagementSystemAPI
             builder.Services.AddScoped<IUserService, UserService>();
 
             builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer(); 
+            builder.Services.AddEndpointsApiExplorer();
             
             var app = builder.Build();
 
-            
+            app.UseCors("AllowFrontend");
 
             app.UseHttpsRedirection();
 

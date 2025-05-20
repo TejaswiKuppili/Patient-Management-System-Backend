@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Services.Interfaces;
 namespace PatientManagementSystemAPI.Controllers
 {
@@ -31,6 +32,30 @@ namespace PatientManagementSystemAPI.Controllers
                 return StatusCode(500, "An unexpected error occurred while fetching users.");
             }
         }
-    }
 
+        /// <summary>
+        /// Updates the role of the user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPut("with-roles/{userId}/role")]
+        public async Task<IActionResult> UpdateUserRole(int userId, [FromBody] UpdateUserRoleDto request)
+        {
+            if (request == null || string.IsNullOrEmpty(request.Role))
+            {
+                return BadRequest("Invalid request body.");
+            }
+
+            try
+            {
+                await userService.UpdateUserRoleAsync(userId, request.Role);
+                return Ok(new { Message = "User role updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message + "An unexpected error occurred while updating role of the user");
+            }
+        }
+    }
 }
