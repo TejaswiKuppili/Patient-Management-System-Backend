@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Tests",
+    "\\Tests\\PatientManagementSystem.Tests"
   ],
-  "SelectedNode": "\\F:\\PMS-Backend",
   "PreviewInSolutionExplorer": false
 }
