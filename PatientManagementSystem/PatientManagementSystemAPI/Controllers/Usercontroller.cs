@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Services.Interfaces;
 namespace PatientManagementSystemAPI.Controllers
@@ -20,15 +21,11 @@ namespace PatientManagementSystemAPI.Controllers
         [HttpGet("roles")]
         public async Task<IActionResult> GetUsersWithRoles()
         {
-
             ApiResponse<UserAndRoleDto> response = await userService.GetUsersAndRolesAsync();
 
                 if (!response.Success)
                     return BadRequest(response);
-
-                return Ok(response);
-            
-
+                return Ok(response);    
         }
 
         /// <summary>
@@ -41,11 +38,11 @@ namespace PatientManagementSystemAPI.Controllers
         {
             if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))
             {
-                return BadRequest("Missing user details.");
+                return BadRequest(ResponseConstants.MissingUserDetails);
             }
 
-            await userService.CreateUser(userDetails);
-            return Ok(new { Message = "User created successfully." });
+            ApiResponse<string> response = await userService.CreateUserAsync(userDetails);
+            return Ok(response);
         }
 
         /// <summary>
@@ -59,18 +56,11 @@ namespace PatientManagementSystemAPI.Controllers
         {
             if (request == null || string.IsNullOrEmpty(request.Role))
             {
-                return BadRequest("Invalid request body."); 
+                return BadRequest(ResponseConstants.InvalidRequestBody); 
             }
 
-            try
-            {
-                await userService.UpdateUserRole(userId, request.Role);
-                return Ok(new { Message = "User role updated successfully." });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message + "An unexpected error occurred while updating role of the user");
-            }
+            ApiResponse<string> response = await userService.UpdateUserRoleAsync(userId, request.Role);
+            return Ok(response);
         }
     }
 }

@@ -47,14 +47,36 @@ namespace PatientManagementSystem.Services
             }
         }
 
-        public Task CreateUser(UserDto userDetails)
+        public async Task<ApiResponse<string>> CreateUserAsync(UserDto userDetails)
         {
-            return userRepository.CreateUserAsync(userDetails);
+            try
+            {
+                await userRepository.CreateUserAsync(userDetails);
+                return ApiResponseHelper.Success("User created successfully.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponseHelper.Fail<string>(
+                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    ResponseConstants.InternalServerError
+                );
+            }
         }
 
-        public Task UpdateUserRole(int userId, string newRoleName)
+        public async Task<ApiResponse<string>> UpdateUserRoleAsync(int userId, string newRoleName)
         {
-            return userRepository.UpdateUserRoleAsync(userId, newRoleName);
+            try
+            {
+                await userRepository.UpdateUserRoleAsync(userId, newRoleName);
+                return ApiResponseHelper.Success("User role updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponseHelper.Fail<string>(
+                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    ResponseConstants.InternalServerError
+                );
+            }
         }
     }
 }

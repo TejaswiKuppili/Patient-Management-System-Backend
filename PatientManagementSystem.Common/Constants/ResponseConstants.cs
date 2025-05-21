@@ -34,5 +34,15 @@
         /// A generic error message prefix.
         /// </summary>
         public const string GenericErrorMessage = "An error occurred: ";
+
+        /// <summary>
+        /// Bad Request: Message for inavlid request body
+        /// </summary>
+        public const string InvalidRequestBody = "Invalid request body.";
+
+        /// <summary>
+        /// Bad Request: Message for missing user details
+        /// </summary>
+        public const string MissingUserDetails = "Missing user details.";
     }
 }
