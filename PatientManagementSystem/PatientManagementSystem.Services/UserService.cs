@@ -22,7 +22,12 @@ namespace PatientManagementSystem.Services
             return await userRepository.GetUsersAndRolesAsync();
         }
 
-        public Task UpdateUserRoleAsync(int userId, string newRoleName)
+        public Task CreateUser(UserDto userDetails)
+        {
+            return userRepository.CreateUserAsync(userDetails);
+        }
+
+        public Task UpdateUserRole(int userId, string newRoleName)
         {
             return userRepository.UpdateUserRoleAsync(userId, newRoleName);
         }

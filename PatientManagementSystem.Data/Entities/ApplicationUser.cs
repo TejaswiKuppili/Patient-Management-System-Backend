@@ -5,7 +5,7 @@ namespace PatientManagementSystem.Data.Entities
     /// <summary>
     /// Represents a system user for login and authentication.
     /// </summary>
-    public class ApplicationUser
+    public class    ApplicationUser
     {
         [Key]
         public int Id { get; set; } // UNIQUEIDENTIFIER

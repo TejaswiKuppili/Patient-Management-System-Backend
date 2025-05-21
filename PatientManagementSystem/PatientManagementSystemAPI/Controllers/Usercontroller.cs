@@ -34,22 +34,39 @@ namespace PatientManagementSystemAPI.Controllers
         }
 
         /// <summary>
+        /// Creates a new user.
+        /// </summary>
+        /// <param name="userDetails"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> CreateUserAsync([FromBody] UserDto userDetails)
+        {
+            if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))
+            {
+                return BadRequest("Missing user details.");
+            }
+
+            await userService.CreateUser(userDetails);
+            return Ok(new { Message = "User created successfully." });
+        }
+
+        /// <summary>
         /// Updates the role of the user
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPut("with-roles/{userId}/role")]
-        public async Task<IActionResult> UpdateUserRole(int userId, [FromBody] UpdateUserRoleDto request)
+        public async Task<IActionResult> UpdateUserRoleAsync(int userId, [FromBody] UpdateUserRoleDto request)
         {
             if (request == null || string.IsNullOrEmpty(request.Role))
             {
-                return BadRequest("Invalid request body.");
+                return BadRequest("Invalid request body."); 
             }
 
             try
             {
-                await userService.UpdateUserRoleAsync(userId, request.Role);
+                await userService.UpdateUserRole(userId, request.Role);
                 return Ok(new { Message = "User role updated successfully." });
             }
             catch (Exception ex)

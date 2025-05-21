@@ -9,6 +9,7 @@ namespace PatientManagementSystem.Repository.Interfaces
     public interface IUserRepository
     {
         Task<UserAndRoleDto> GetUsersAndRolesAsync();
+        Task<UserDto> CreateUserAsync(UserDto newUser);
         Task UpdateUserRoleAsync(int userId, string newRoleName);
     }
 

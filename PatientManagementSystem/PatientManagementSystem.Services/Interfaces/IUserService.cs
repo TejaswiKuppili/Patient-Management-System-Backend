@@ -7,7 +7,8 @@ namespace PatientManagementSystem.Services.Interfaces
     public interface IUserService
     {
         Task<UserAndRoleDto> GetUsersAndRolesAsync();
-        Task UpdateUserRoleAsync(int userId, string newRoleName);
+        Task CreateUser(UserDto userDetails);
+        Task UpdateUserRole(int userId, string newRoleName);
     }
 
 }

@@ -3,6 +3,7 @@ using PatientManagementSystem.Data.DataContext;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Repository
 {
@@ -52,6 +53,36 @@ namespace PatientManagementSystem.Repository
             {
                 throw new Exception("An error occurred while retrieving users and roles.", ex);
             }
+        }
+
+        public async Task<UserDto> CreateUserAsync(UserDto newUser)
+        {
+            var role = await context.Roles
+        .FirstOrDefaultAsync(r => r.Name == newUser.RoleName);
+
+            if (role == null)
+            {
+                throw new Exception("Role not found.");
+            }
+
+            var user = new ApplicationUser
+            {
+                Username = newUser.Name,
+                Email = newUser.Email,
+                PasswordHash = newUser.Password,
+                RoleId = role.RoleId
+            };
+
+            context.ApplicationUsers.Add(user);
+            await context.SaveChangesAsync();
+            // Return the created user as a DTO
+            return new UserDto
+            {
+                Id = user.Id,
+                Name = user.Username,
+                Email = user.Email,
+                RoleName = role.Name
+            };
         }
 
         /// <summary>
