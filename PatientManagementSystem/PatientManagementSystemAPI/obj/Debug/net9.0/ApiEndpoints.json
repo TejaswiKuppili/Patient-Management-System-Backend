@@ -18,7 +18,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
     "Method": "GetUsersWithRoles",
-    "RelativePath": "api/Users/with-roles",
+    "RelativePath": "api/Users/roles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

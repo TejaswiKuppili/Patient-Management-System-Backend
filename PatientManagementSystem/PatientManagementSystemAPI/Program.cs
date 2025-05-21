@@ -49,7 +49,7 @@ namespace PatientManagementSystemAPI
 
             // OPTIONAL: Map default route to UsersController
             app.MapGet("/", ([FromServices] IUserService userService) =>
-                Results.Redirect("/api/users/with-roles"));
+                Results.Redirect("/api/users/roles"));
 
             app.Run();
         }

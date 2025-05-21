@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace PatientManagementSystem.Data.Entities
 {
+    /// <summary>
+    /// Represents a medical record for a patient.
+    /// </summary>
     public class MedicalRecord
     {
         [Key]

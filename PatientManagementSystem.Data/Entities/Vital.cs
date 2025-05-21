@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatientManagementSystem.Data.Entities
 {
+    /// <summary>
+    /// Represents vital signs and measurements for a patient.
+    /// </summary>
     public class Vital
     {
         [Key]

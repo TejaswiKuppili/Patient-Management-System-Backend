@@ -1,8 +1,9 @@
-﻿using PatientManagementSystem.Repository.Interfaces;
+﻿using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using PatientManagementSystem.Common.DTOs;
-using PatientManagementSystem.Data.DataContext;
+using PatientManagementSystem.Common.Constants;
+using PatientManagementSystem.Common.Helpers;
+
 namespace PatientManagementSystem.Services
 {
     /// <summary>
@@ -17,9 +18,33 @@ namespace PatientManagementSystem.Services
             this.userRepository = userRepository;
         }
 
-        public async Task<UserAndRoleDto> GetUsersAndRolesAsync()
+        /// <summary>
+        /// Retrieves list of users and roles.
+        /// </summary>
+        /// <returns>ApiResponse containing users and roles, or error message on failure</returns>
+        public async Task<ApiResponse<UserAndRoleDto>> GetUsersAndRolesAsync()
         {
-            return await userRepository.GetUsersAndRolesAsync();
+            try
+            {
+                var result = await userRepository.GetUsersAndRolesAsync();
+
+                if (result == null || result.Users == null || !result.Users.Any())
+                {
+                    return ApiResponseHelper.Fail<UserAndRoleDto>(
+                        ResponseConstants.NoUsersFoundMessage,
+                        ResponseConstants.NotFound
+                    );
+                }
+
+                return ApiResponseHelper.Success(result);
+            }
+            catch (Exception ex)
+            {
+                return ApiResponseHelper.Fail<UserAndRoleDto>(
+                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    ResponseConstants.InternalServerError
+                );
+            }
         }
 
         public Task CreateUser(UserDto userDetails)
