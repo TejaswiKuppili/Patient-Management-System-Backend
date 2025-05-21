@@ -17,20 +17,18 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Retrieves all users with their roles.
         /// </summary>
-        [HttpGet("with-roles")]
+        [HttpGet("roles")]
         public async Task<IActionResult> GetUsersWithRoles()
         {
-            try
-            {
-                var users = await userService.GetUsersAndRolesAsync();
-                
-                return Ok(users);
-            }
-            catch (Exception ex)
-            {
-                // Optionally log ex here using a logger
-                return StatusCode(500, "An unexpected error occurred while fetching users.");
-            }
+
+            ApiResponse<UserAndRoleDto> response = await userService.GetUsersAndRolesAsync();
+
+                if (!response.Success)
+                    return BadRequest(response);
+
+                return Ok(response);
+            
+
         }
 
         /// <summary>

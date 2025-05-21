@@ -18,7 +18,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
+	<!--check this out and change it -->
   <ItemGroup>
     <ProjectReference Include="..\..\PatientManagementSystem.Common\PatientManagementSystem.Common.csproj" />
     <ProjectReference Include="..\..\PatientManagementSystem.Data\PatientManagementSystem.Data.csproj" />

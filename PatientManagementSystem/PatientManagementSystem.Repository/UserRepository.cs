@@ -51,7 +51,29 @@ namespace PatientManagementSystem.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving users and roles.", ex);
+
+            List<ApplicationUser>? users = await context.ApplicationUsers
+                        .Include(user => user.Role)
+                        .ToListAsync();
+
+                    List<UserDto>? userDtos = users.Select(user => new UserDto
+                    {
+                        Name = user.Username,
+                        Email = user.Email,
+                        RoleName = user.Role?.Name
+                    }).ToList();
+
+                    List<string>? allRoles = await context.Roles
+                        .Select(r => r.Name)
+                        .ToListAsync();
+
+                    return new UserAndRoleDto
+                    {
+                        Users = userDtos,
+                        Roles = allRoles
+                    };
+                
+                
             }
         }
 

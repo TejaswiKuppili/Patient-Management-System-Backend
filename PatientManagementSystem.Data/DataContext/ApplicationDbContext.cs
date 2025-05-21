@@ -4,20 +4,60 @@ using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Data.DataContext
 {
+    /// <summary>
+    /// Represents the database context for the Patient Management System,
+    /// managing all entities and their relationships.
+    /// </summary>
     public class ApplicationDbContext : DbContext
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApplicationDbContext"/> class.
+        /// </summary>
+        /// <param name="options">The options for this context.</param>
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
+        /// <summary>
+        /// Gets or sets the DbSet for ApplicationUser entities.
+        /// </summary>
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Role entities.
+        /// </summary>
         public DbSet<Role> Roles { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Employee entities.
+        /// </summary>
         public DbSet<Employee> Employees { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Patient entities.
+        /// </summary>
         public DbSet<Patient> Patients { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Appointment entities.
+        /// </summary>
         public DbSet<Appointment> Appointments { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for MedicalRecord entities.
+        /// </summary>
         public DbSet<MedicalRecord> MedicalRecords { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DbSet for Vital entities.
+        /// </summary>
         public DbSet<Vital> Vitals { get; set; }
+
+        /// <summary>
+        /// Configures the model and defines the schema for the database.
+        /// </summary>
+        /// <param name="modelBuilder">The builder used to construct the model for this context.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -126,13 +166,12 @@ namespace PatientManagementSystem.Data.DataContext
             modelBuilder.Entity<Appointment>()
                 .Property(a => a.Status)
                 .HasDefaultValue("Scheduled");
-             //   .HasConversion<string>()
-             //   .HasDefaultValue(AppointmentStatus.Scheduled);
+            //   .HasConversion<string>()
+            //   .HasDefaultValue(AppointmentStatus.Scheduled);
 
             modelBuilder.Entity<MedicalRecord>()
                 .Property(mr => mr.RecordType);
-           //     .HasConversion<string>();
+            //     .HasConversion<string>();
         }
-
     }
 }
