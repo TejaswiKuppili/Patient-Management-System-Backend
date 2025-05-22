@@ -1035,7 +1035,7 @@
       "PatientManagementSystem.Common/1.0.0": {
         "runtime": {
           "PatientManagementSystem.Common.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1047,7 +1047,7 @@
         },
         "runtime": {
           "PatientManagementSystem.Data.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1059,7 +1059,7 @@
         },
         "runtime": {
           "PatientManagementSystem.Repository.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1071,7 +1071,7 @@
         },
         "runtime": {
           "PatientManagementSystem.Services.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

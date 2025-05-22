@@ -688,3 +688,7 @@ D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem\Patient
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\obj\Debug\net9.0\PatientManagementSystemAPI.pdb
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\obj\Debug\net9.0\PatientManagementSystemAPI.genruntimeconfig.cache
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\obj\Debug\net9.0\ref\PatientManagementSystemAPI.dll
+F:\PMS-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\PatientManagementSystem.Repository.dll
+F:\PMS-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\PatientManagementSystem.Services.dll
+F:\PMS-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\PatientManagementSystem.Repository.pdb
+F:\PMS-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\PatientManagementSystem.Services.pdb
