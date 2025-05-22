@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "HvxPmnklfVU=",
+  "dgSpecHash": "APfvb5mXDhM=",
   "success": true,
-  "projectFilePath": "F:\\PMS-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
-=======
-  "dgSpecHash": "I5IBqgYJEB0=",
-  "success": true,
-  "projectFilePath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
->>>>>>> 849574f836528deb731a1c16acffe726b64c8318
+  "projectFilePath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

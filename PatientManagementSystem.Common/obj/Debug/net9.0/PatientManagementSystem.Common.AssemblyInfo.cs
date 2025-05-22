@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PatientManagementSystem.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efc5b1a71b12793e9ef7d4df7eb30dd22d272c40")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52a41a1e87e31d13b5f9bf5b8faea0a8871f74f0")]
->>>>>>> 849574f836528deb731a1c16acffe726b64c8318
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed6a8ca87c47b04bb043b55d73af5d3ec68c094c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PatientManagementSystem.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PatientManagementSystem.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

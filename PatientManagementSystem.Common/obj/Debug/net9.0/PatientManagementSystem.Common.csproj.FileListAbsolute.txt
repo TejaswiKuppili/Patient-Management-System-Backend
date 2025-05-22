@@ -57,3 +57,15 @@ D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSy
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.deps.json
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.dll
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.pdb
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfoInputs.cache
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfo.cs
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.CoreCompileInputs.cache
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.sourcelink.json
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.dll
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
+D:\React\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
