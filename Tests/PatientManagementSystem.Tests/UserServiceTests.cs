@@ -1,5 +1,6 @@
-﻿using Azure;
+﻿
 using Moq;
+using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services;
@@ -79,12 +80,11 @@ namespace PatientManagementSystem.Tests.Services
         /// <summary>
         /// Tests that CreateUserAsync creates a user successfully and returns a 200 OK response.
         /// </summary>
-        /// <returns></returns>
         [Fact]
         public async Task CreateUserAsync_CreatesUserSuccessfully()
         {
             // Arrange
-            var newUser = new UserDto
+             UserDto? newUser = new UserDto
             {
                 Name = "John Doe",
                 Email = "john@example.com",
@@ -92,7 +92,7 @@ namespace PatientManagementSystem.Tests.Services
                 RoleName = "Admin"
             };
 
-            var createdUser = new UserDto
+            UserDto? createdUser = new UserDto
             {
                 Id = 1,
                 Name = newUser.Name,
@@ -114,12 +114,11 @@ namespace PatientManagementSystem.Tests.Services
         /// <summary>
         /// Tests that CreateUserAsync throws an exception when the role is not found.
         /// </summary>
-        /// <returns></returns>
         [Fact]
-        public async Task CreateUserAsync_ThrowsException_WhenRoleNotFound()
+        public async Task CreateUserAsync_ReturnsFailureResponse_WhenRoleNotFound()
         {
             // Arrange
-            var invalidUser = new UserDto
+             UserDto invalidUser = new UserDto
             {
                 Name = "Invalid User",
                 Email = "invalid@example.com",
@@ -131,14 +130,19 @@ namespace PatientManagementSystem.Tests.Services
                 .Setup(repo => repo.CreateUserAsync(invalidUser))
                 .ThrowsAsync(new Exception("Role not found."));
 
-            // Act & Assert
-            await Assert.ThrowsAsync<Exception>(() => userService.CreateUserAsync(invalidUser));
+            // Act
+            ApiResponse<string>? result = await userService.CreateUserAsync(invalidUser);
+
+            // Assert
+            Assert.False(result.Success);
+            Assert.Contains("Role not found", result.Message);
+            Assert.Equal(ResponseConstants.InternalServerError, result.StatusCode);
         }
+
 
         /// <summary>
         /// Tests that UpdateUserRoleAsync updates the user's role successfully.
         /// </summary>
-        /// <returns></returns>
         [Fact]
         public async Task UpdateUserRoleAsync_UpdatesRoleSuccessfully()
         {
@@ -160,7 +164,6 @@ namespace PatientManagementSystem.Tests.Services
         /// <summary>
         /// Tests that UpdateUserRoleAsync throws an exception when the user or role is not found.
         /// </summary>
-        /// <returns></returns>
         [Fact]
         public async Task UpdateUserRoleAsync_ThrowsException_WhenUserOrRoleNotFound()
         {
@@ -172,8 +175,13 @@ namespace PatientManagementSystem.Tests.Services
                 .Setup(repo => repo.UpdateUserRoleAsync(userId, invalidRole))
                 .ThrowsAsync(new Exception("Role not found."));
 
-            // Act & Assert
-            await Assert.ThrowsAsync<Exception>(() => userService.UpdateUserRoleAsync(userId, invalidRole));
+            // Act
+            ApiResponse<string> result = await userService.UpdateUserRoleAsync(userId, invalidRole);
+
+            // Assert
+            Assert.False(result.Success);
+            Assert.Contains("Role not found", result.Message);
+            Assert.Equal(ResponseConstants.InternalServerError, result.StatusCode);
         }
     }
 }
