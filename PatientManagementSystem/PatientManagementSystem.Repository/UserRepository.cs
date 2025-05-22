@@ -21,17 +21,16 @@ namespace PatientManagementSystem.Repository
         /// <summary>
         /// Fetches all the users from the database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>User details list and role names list</returns>
         /// <exception cref="Exception"></exception>
         public async Task<UserAndRoleDto> GetUsersAndRolesAsync()
         {
-            try
-            {
-                var users = await context.ApplicationUsers
+
+            List<ApplicationUser>? users = await context.ApplicationUsers
                     .Include(user => user.Role)
                     .ToListAsync();
 
-                var userDtos = users.Select(user => new UserDto
+            List<UserDto>? userDtos = users.Select(user => new UserDto
                 {
                     Id = user.Id,
                     Name = user.Username,
@@ -39,7 +38,7 @@ namespace PatientManagementSystem.Repository
                     RoleName = user.Role?.Name
                 }).ToList();
 
-                var allRoles = await context.Roles
+                List<string>? allRoles = await context.Roles
                     .Select(r => r.Name)
                     .ToListAsync();
 
@@ -48,46 +47,21 @@ namespace PatientManagementSystem.Repository
                     Users = userDtos,
                     Roles = allRoles
                 };
-            }
-            catch (Exception ex)
-            {
-
-            List<ApplicationUser>? users = await context.ApplicationUsers
-                        .Include(user => user.Role)
-                        .ToListAsync();
-
-                    List<UserDto>? userDtos = users.Select(user => new UserDto
-                    {
-                        Name = user.Username,
-                        Email = user.Email,
-                        RoleName = user.Role?.Name
-                    }).ToList();
-
-                    List<string>? allRoles = await context.Roles
-                        .Select(r => r.Name)
-                        .ToListAsync();
-
-                    return new UserAndRoleDto
-                    {
-                        Users = userDtos,
-                        Roles = allRoles
-                    };
-                
-                
-            }
+                       
         }
+        /// <summary>
+        /// Creating new user
+        /// </summary>
+        /// <param name="newUser"></param>
 
+        /// <exception cref="Exception"></exception>
         public async Task<UserDto> CreateUserAsync(UserDto newUser)
         {
-            var role = await context.Roles
-        .FirstOrDefaultAsync(r => r.Name == newUser.RoleName);
-
-            if (role == null)
-            {
-                throw new Exception("Role not found.");
-            }
-
-            var user = new ApplicationUser
+            Role? role = await context.Roles
+        .FirstOrDefaultAsync(r => r.Name == newUser.RoleName) ?? throw new Exception("Role not found.");
+            
+            
+            ApplicationUser? user = new ApplicationUser
             {
                 Username = newUser.Name,
                 Email = newUser.Email,
@@ -112,11 +86,11 @@ namespace PatientManagementSystem.Repository
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="newRoleName"></param>
-        /// <returns></returns>
+       
         /// <exception cref="Exception"></exception>
         public async Task UpdateUserRoleAsync(int userId, string newRoleName)
         {
-            var user = await context.ApplicationUsers
+            ApplicationUser? user = await context.ApplicationUsers
                 .Include(u => u.Role)
                 .FirstOrDefaultAsync(u => u.Id == userId);
 
@@ -125,7 +99,7 @@ namespace PatientManagementSystem.Repository
                 throw new Exception("User not found.");
             }
 
-            var newRole = await context.Roles
+            Role? newRole = await context.Roles
                 .FirstOrDefaultAsync(r => r.Name == newRoleName);
 
             if (newRole == null)

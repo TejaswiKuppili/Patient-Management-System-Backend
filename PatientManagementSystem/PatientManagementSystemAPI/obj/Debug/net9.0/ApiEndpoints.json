@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "PatientManagementSystemAPI.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_1",
+    "Method": "\u003CMain\u003Eb__0_2",
     "RelativePath": "",
     "HttpMethod": "GET",
     "IsController": false,
@@ -17,12 +17,49 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
+    "Method": "CreateUserAsync",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetails",
+        "Type": "PatientManagementSystem.Common.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
     "Method": "GetUsersWithRoles",
     "RelativePath": "api/Users/roles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
+    "Method": "UpdateUserRoleAsync",
+    "RelativePath": "api/Users/roles/{userId}/role",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "PatientManagementSystem.Common.DTOs.UpdateUserRoleDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

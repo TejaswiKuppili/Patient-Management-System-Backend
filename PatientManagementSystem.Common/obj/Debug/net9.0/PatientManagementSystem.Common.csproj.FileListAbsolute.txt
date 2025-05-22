@@ -49,3 +49,15 @@ D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem.Common\
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
 D:\PMS-Backend\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.deps.json
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\bin\Debug\net9.0\PatientManagementSystem.Common.pdb
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfoInputs.cache
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.AssemblyInfo.cs
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.CoreCompileInputs.cache
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.sourcelink.json
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
