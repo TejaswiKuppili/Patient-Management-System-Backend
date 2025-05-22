@@ -26,7 +26,7 @@ namespace PatientManagementSystem.Services
         {
             try
             {
-                var result = await userRepository.GetUsersAndRolesAsync();
+                UserAndRoleDto? result = await userRepository.GetUsersAndRolesAsync();
 
                 if (result == null || result.Users == null || !result.Users.Any())
                 {
@@ -46,7 +46,10 @@ namespace PatientManagementSystem.Services
                 );
             }
         }
-
+        /// <summary>
+        /// Creates a new user.
+        /// </summary>
+        /// <param name="userDetails"></param>
         public async Task<ApiResponse<string>> CreateUserAsync(UserDto userDetails)
         {
             try
@@ -62,7 +65,11 @@ namespace PatientManagementSystem.Services
                 );
             }
         }
-
+        /// <summary>
+        /// Updates the role of a user.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="newRoleName"></param>
         public async Task<ApiResponse<string>> UpdateUserRoleAsync(int userId, string newRoleName)
         {
             try

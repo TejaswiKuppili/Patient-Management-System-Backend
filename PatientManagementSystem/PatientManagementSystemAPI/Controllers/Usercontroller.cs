@@ -4,6 +4,9 @@ using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Services.Interfaces;
 namespace PatientManagementSystemAPI.Controllers
 {
+    /// <summary>
+    /// Controller for managing users and their roles,to create new users and update user roles.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
