@@ -51,7 +51,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <param name="userId"></param>
         /// <param name="request"></param>
         /// <returns></returns>
-        [HttpPut("with-roles/{userId}/role")]
+        [HttpPut("roles/{userId}/role")]
         public async Task<IActionResult> UpdateUserRoleAsync(int userId, [FromBody] UpdateUserRoleDto request)
         {
             if (request == null || string.IsNullOrEmpty(request.Role))

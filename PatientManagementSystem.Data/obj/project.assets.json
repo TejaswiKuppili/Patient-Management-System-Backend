@@ -4718,11 +4718,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
       "projectName": "PatientManagementSystem.Data",
       "projectPath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
       "packagesPath": "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\",
       "outputPath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\obj\\",
+=======
+      "projectUniqueName": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+      "projectName": "PatientManagementSystem.Data",
+      "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+      "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+      "outputPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\obj\\",
+>>>>>>> 849574f836528deb731a1c16acffe726b64c8318
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

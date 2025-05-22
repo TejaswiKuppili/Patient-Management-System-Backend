@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Tests",
-    "\\Tests\\PatientManagementSystem.Tests"
+    "\\PatientManagementSystem.Common",
+    "\\PatientManagementSystem.Data",
+    "\\Tests"
   ],
   "PreviewInSolutionExplorer": false
 }

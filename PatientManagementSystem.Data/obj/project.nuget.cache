@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "JSNyFhG2+zg=",
   "success": true,
   "projectFilePath": "F:\\PMS-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+=======
+  "dgSpecHash": "CMQ8p+q1NNU=",
+  "success": true,
+  "projectFilePath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+>>>>>>> 849574f836528deb731a1c16acffe726b64c8318
   "expectedPackageFiles": [
     "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
