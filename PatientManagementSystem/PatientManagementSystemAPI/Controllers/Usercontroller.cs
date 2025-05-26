@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Services.Interfaces;
@@ -55,6 +56,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPut("roles/{userId}/role")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateUserRoleAsync(int userId, [FromBody] UpdateUserRoleDto request)
         {
             if (request == null || string.IsNullOrEmpty(request.Role))

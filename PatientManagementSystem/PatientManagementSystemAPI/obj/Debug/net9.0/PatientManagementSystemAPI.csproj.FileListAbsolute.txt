@@ -864,3 +864,4 @@ D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSy
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\obj\Debug\net9.0\PatientManagementSystemAPI.genruntimeconfig.cache
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\obj\Debug\net9.0\ref\PatientManagementSystemAPI.dll
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem\PatientManagementSystemAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
