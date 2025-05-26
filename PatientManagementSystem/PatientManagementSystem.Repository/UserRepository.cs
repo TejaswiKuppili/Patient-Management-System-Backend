@@ -110,6 +110,26 @@ namespace PatientManagementSystem.Repository
             user.RoleId = newRole.Id;
             await context.SaveChangesAsync();
         }
+
+
+        public async Task<UserDto?> GetUserByEmailAsync(string email)
+        {
+            var user = await context.ApplicationUsers
+                .Include(u => u.Role) 
+                .FirstOrDefaultAsync(u => u.Email == email);
+
+            if (user == null) return null;
+
+            return new UserDto
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Name = user.Username,
+                RoleName = user.Role?.Name,
+                Password = user.PasswordHash 
+            };
+        }
+
     }
 }
 

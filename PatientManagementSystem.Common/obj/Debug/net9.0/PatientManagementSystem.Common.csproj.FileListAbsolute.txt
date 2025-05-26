@@ -61,3 +61,4 @@ D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSy
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\refint\PatientManagementSystem.Common.dll
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.pdb
 D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\ref\PatientManagementSystem.Common.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\PatientManagementSystem.Common\obj\Debug\net9.0\PatientManagementSystem.Common.csproj.AssemblyReference.cache

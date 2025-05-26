@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PatientManagementSystem.Data.DataContext;
+using PatientManagementSystem.Data.Repositories;
 using PatientManagementSystem.Repository;
 using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services;
@@ -30,13 +31,15 @@ namespace PatientManagementSystemAPI
 
             // Register Repositories
             builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+            builder.Services.AddScoped<IAuthService, AuthService>();
             // Register Services
             builder.Services.AddScoped<IUserService, UserService>();
-
+            builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            
+            builder.Services.AddHttpContextAccessor();
+
             var app = builder.Build();
 
             app.UseCors("AllowFrontend");

@@ -55,6 +55,11 @@ namespace PatientManagementSystem.Data.DataContext
         public DbSet<Vital> Vitals { get; set; }
 
         /// <summary>
+        /// Gets or sets the DbSet for RefreshToken entities.
+        /// </summary>
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+        /// <summary>
         /// Configures the model and defines the schema for the database.
         /// </summary>
         /// <param name="modelBuilder">The builder used to construct the model for this context.</param>
@@ -157,7 +162,23 @@ namespace PatientManagementSystem.Data.DataContext
                       .IsRequired();
             });
 
-            //// Enum conversions
+
+            // RefreshTokens
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasKey(rt => rt.Id);
+                entity.Property(rt => rt.Token).IsRequired().HasMaxLength(500);
+                entity.Property(rt => rt.ExpiresAt).IsRequired();
+                entity.Property(rt => rt.CreatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(rt => rt.CreatedByIp).HasMaxLength(50);
+                entity.HasOne(rt => rt.User)
+                      .WithMany(u => u.RefreshTokens)
+                      .HasForeignKey(rt => rt.UserId)
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .IsRequired();
+            });
+
+            // Enum conversions
             modelBuilder.Entity<Patient>()
                 .Property(p => p.Gender)
                 //.HasConversion<string>()

@@ -29,5 +29,7 @@ namespace PatientManagementSystem.Data.Entities
 
         // Navigation Property
         public Role Role { get; set; } = null!;
+        public ICollection<RefreshToken> RefreshTokens { get; set; }
+
     }
 }

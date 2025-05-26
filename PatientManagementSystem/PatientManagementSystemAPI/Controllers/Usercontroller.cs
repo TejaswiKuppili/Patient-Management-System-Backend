@@ -36,7 +36,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// </summary>
         /// <param name="userDetails"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> CreateUserAsync([FromBody] UserDto userDetails)
         {
             if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))

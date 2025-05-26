@@ -16,9 +16,25 @@
     ]
   },
   {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "PatientManagementSystem.Common.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
     "Method": "CreateUserAsync",
-    "RelativePath": "api/Users",
+    "RelativePath": "api/Users/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

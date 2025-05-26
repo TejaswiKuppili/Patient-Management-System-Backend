@@ -3,6 +3,7 @@ using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.Helpers;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Services
 {
@@ -54,9 +55,13 @@ namespace PatientManagementSystem.Services
         {
             try
             {
+                userDetails.Password = PasswordHasher.HashPassword(userDetails.Password);
+
+
                 await userRepository.CreateUserAsync(userDetails);
                 return ApiResponseHelper.Success("User created successfully.");
             }
+
             catch (Exception ex)
             {
                 return ApiResponseHelper.Fail<string>(
@@ -85,5 +90,27 @@ namespace PatientManagementSystem.Services
                 );
             }
         }
+
+
+
+        /// <summary>
+        /// Validates user credentials against stored hash.
+        /// </summary>
+        /// <param name="email">Email input</param>
+        /// <param name="password">Plain text password input</param>
+        /// <returns>ApplicationUser object if valid; otherwise null</returns>
+        public async Task<UserDto>  ValidateUserAsync(string email, string password)
+        {
+            // Await the result of the asynchronous call to get the user
+            UserDto? user = await userRepository.GetUserByEmailAsync(email);
+
+            if (user == null)
+                return null;
+
+            // Verify password
+            bool isValid = PasswordHasher.VerifyHashedPassword(user.Password, password);
+            return user;
+        }
+
     }
 }
