@@ -109,7 +109,8 @@ namespace PatientManagementSystemAPI
                 {
                     builder.WithOrigins("http://localhost:3000")
                            .AllowAnyHeader()
-                           .AllowAnyMethod();
+                           .AllowAnyMethod()
+                           .AllowCredentials();
                 });
             });
 
