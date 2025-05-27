@@ -21,6 +21,16 @@
         public const int Success = 200;
 
         /// <summary>
+        /// Message indicating that User account has been created 
+        /// </summary>
+        public const string CreatedUserMessage = "Account successfully created.";
+
+        /// <summary>
+        /// Message indicating that User Role has been updated
+        /// </summary>
+        public const string RoleUpdatedMessage = "User role updated successfully.";
+
+        /// <summary>
         /// Message indicating that user details were fetched successfully.
         /// </summary>
         public const string UserFetchedMessage = "User details fetched successfully";
@@ -44,5 +54,31 @@
         /// Bad Request: Message for missing user details
         /// </summary>
         public const string MissingUserDetails = "Missing user details.";
+        
+        /// <summary>
+        /// Bad Request
+        /// </summary>
+        public const int BadRequest = 400;
+
+        /// <summary>
+        /// Bad Request: UnAuthorized status code
+        /// </summary>
+        public const int UnAuthorized = 401;
+
+
+        /// <summary>
+        /// Message indicating a successful login attempt.
+        /// </summary>
+        public const string LoginSuccess = "Login successful.";
+
+        /// <summary>
+        /// Message indicating that provided login credentials (email or password) are incorrect.
+        /// </summary>
+        public const string InvalidCredentials = "Invalid email or password.";
+
+        /// <summary>
+        /// Message indicating that the user does not have the necessary authentication or authorization to access a resource.
+        /// </summary>
+        public const string UnauthorizedAccess = "Unauthorized access.";
     }
 }

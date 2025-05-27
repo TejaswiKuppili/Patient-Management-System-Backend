@@ -3,7 +3,7 @@ using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.Helpers;
-using PatientManagementSystem.Data.Entities;
+using Microsoft.Extensions.Logging;
 
 namespace PatientManagementSystem.Services
 {
@@ -13,10 +13,12 @@ namespace PatientManagementSystem.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository userRepository;
+        private readonly ILogger<UserService> logger;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, ILogger<UserService> logger)
         {
             this.userRepository = userRepository;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -37,7 +39,7 @@ namespace PatientManagementSystem.Services
                     );
                 }
 
-                return ApiResponseHelper.Success(result);
+                return ApiResponseHelper.Success(result, message: ResponseConstants.UserFetchedMessage);
             }
             catch (Exception ex)
             {
@@ -59,7 +61,7 @@ namespace PatientManagementSystem.Services
 
 
                 await userRepository.CreateUserAsync(userDetails);
-                return ApiResponseHelper.Success("User created successfully.");
+                return ApiResponseHelper.Success(ResponseConstants.CreatedUserMessage);
             }
 
             catch (Exception ex)
@@ -80,7 +82,7 @@ namespace PatientManagementSystem.Services
             try
             {
                 await userRepository.UpdateUserRoleAsync(userId, newRoleName);
-                return ApiResponseHelper.Success("User role updated successfully.");
+                return ApiResponseHelper.Success(ResponseConstants.RoleUpdatedMessage);
             }
             catch (Exception ex)
             {
@@ -99,17 +101,34 @@ namespace PatientManagementSystem.Services
         /// <param name="email">Email input</param>
         /// <param name="password">Plain text password input</param>
         /// <returns>ApplicationUser object if valid; otherwise null</returns>
-        public async Task<UserDto>  ValidateUserAsync(string email, string password)
+        public async Task<UserDto?> ValidateUserAsync(string email, string password)
         {
+            try { 
             // Await the result of the asynchronous call to get the user
             UserDto? user = await userRepository.GetUserByEmailAsync(email);
 
             if (user == null)
+            {
+                logger.LogWarning("Login failed: email not found for {email}", email);
                 return null;
+            }
 
             // Verify password
             bool isValid = PasswordHasher.VerifyHashedPassword(user.Password, password);
+            if (!isValid)
+            {
+                logger.LogWarning("Login failed: invalid password for {email}", email);
+                return null;
+            }
+
             return user;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error validating user credentials for {email}", email);
+                return null;
+            }
+
         }
 
     }
