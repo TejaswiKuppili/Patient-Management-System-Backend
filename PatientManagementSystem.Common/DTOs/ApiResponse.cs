@@ -4,7 +4,7 @@ namespace PatientManagementSystem.Common.DTOs
     /// <summary>
     /// provides a standardized format for API responses, indicating success or failure, including an optional message, holding the returned data, and providing an HTTP status code
     /// </summary>
-    /// <typeparam name="T">User and Role details</typeparam>
+    /// <typeparam name="T"></typeparam>
     public class ApiResponse<T>
     {
         public bool Success { get; set; } 

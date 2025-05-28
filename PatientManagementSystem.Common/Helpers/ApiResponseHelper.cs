@@ -9,19 +9,34 @@ namespace PatientManagementSystem.Common.Helpers
     public static class ApiResponseHelper
     {
         /// <summary>
-        /// Creates a successful API response with the provided data and an optional status code.
+        /// Creates a successful API response with the provided data.
         /// </summary>
         /// <typeparam name="T">The type of the data being returned.</typeparam>
         /// <param name="data">The data to include in the response.</param>
         /// <param name="statusCode">The HTTP status code for the response (defaults to 200 Success).</param>
         /// <returns>A new ApiResponse instance indicating success.</returns>
-        public static ApiResponse<T> Success<T>(T data, int statusCode = ResponseConstants.Success)
+        public static ApiResponse<T> Success<T>(T data, string message)
         {
             return new ApiResponse<T>
             {
                 Success = true,
                 Data = data,
-                StatusCode = statusCode
+                StatusCode = ResponseConstants.Success,
+                Message= message
+            };
+        }
+        /// <summary>
+        /// Creates a successful API response with message
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public static ApiResponse<string> Success(string message)
+        {
+            return new ApiResponse<string>
+            {
+                Success = true,
+                StatusCode = ResponseConstants.Success,
+                Message = message
             };
         }
 
@@ -42,5 +57,7 @@ namespace PatientManagementSystem.Common.Helpers
                 StatusCode = statusCode
             };
         }
+
+
     }
 }
