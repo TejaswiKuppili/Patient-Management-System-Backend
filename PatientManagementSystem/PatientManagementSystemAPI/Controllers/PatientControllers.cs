@@ -33,8 +33,8 @@ namespace PatientManagementSystemAPI.Controllers
             return Ok(patient);
         }
 
-        [HttpPost("Create")]
-        public async Task<IActionResult> Add([FromBody] PatientDto dto)
+        [HttpPost("addpatient")]
+        public async Task<IActionResult> Add( PatientDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

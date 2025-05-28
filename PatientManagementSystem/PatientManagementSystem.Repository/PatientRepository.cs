@@ -1,4 +1,4 @@
-﻿
+﻿using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Data.DataContext;
 using PatientManagementSystem.Data.Entities;
 using Microsoft.EntityFrameworkCore;

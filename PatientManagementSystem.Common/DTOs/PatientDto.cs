@@ -12,6 +12,6 @@
         public DateTime CreatedAt { get; set; }
         public int CreatedBy { get; set; }
         public string ReasonForVisit { get; set; }
-        public string CreatedByEmployeeName { get; set; } = null!; // Optional - joins
+        public string? CreatedByEmployeeName { get; set; } // Optional - joins
     }
 }
