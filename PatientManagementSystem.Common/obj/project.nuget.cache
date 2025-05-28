@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u1eenx18nvg=",
+  "dgSpecHash": "SGhZsb4wLds=",
   "success": true,
-  "projectFilePath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+  "projectFilePath": "D:\\PMS-Backend(before merge of tests and assignroles)\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\microsoft.aspnetcore.http\\2.3.0\\microsoft.aspnetcore.http.2.3.0.nupkg.sha512",

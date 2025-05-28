@@ -1,4 +1,6 @@
-﻿using PatientManagementSystem.Common.DTOs;
+﻿using PatientManagementSystem.Common.Constants;
+using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Common.Helpers;
 using PatientManagementSystem.Data.Entities;
 using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
@@ -18,12 +20,12 @@ namespace PatientManagementSystem.Services
         /// <summary>
         /// Gets all patients with navigation properties.
         /// </summary>
-        public async Task<List<PatientDto>> GetAllAsync()
+        public async Task<ApiResponse<List<PatientDto>>> GetAllAsync()
         {
             var patients = await repository.GetAllAsync();
 
-            return patients.Select(p => new PatientDto
-            {
+             var result= patients.Select(p => new PatientDto
+             {
                 Id = p.Id,
                 FirstName = p.FirstName,
                 LastName = p.LastName,
@@ -36,6 +38,7 @@ namespace PatientManagementSystem.Services
                 ReasonForVisit = p.ReasonForVisit,
                 CreatedByEmployeeName = p.CreatedByEmployee?.FullName ?? "Unknown"
             }).ToList();
+            return ApiResponseHelper.Success<List<PatientDto>>(result, ResponseConstants.PatientsFetchedMessage);
         }
 
 
@@ -50,7 +53,7 @@ namespace PatientManagementSystem.Services
         /// <summary>
         /// Adds a new patient based on DTO.
         /// </summary>
-        public async Task AddAsync(PatientDto dto)
+        public async Task<ApiResponse<PatientDto>> AddAsync(PatientDto dto)
         {
             var newPatient = new Patient
             {
@@ -65,8 +68,25 @@ namespace PatientManagementSystem.Services
                 ReasonForVisit = dto.ReasonForVisit
             };
 
-            await repository.AddAsync(newPatient);
+            var result = await repository.AddAsync(newPatient);
+
+            var returnDto = new PatientDto
+            {
+                Id = result.Id,
+                FirstName = result.FirstName,
+                LastName = result.LastName,
+                DateOfBirth = result.DateOfBirth,
+                Gender = result.Gender,
+                ContactNumber = result.ContactNumber,
+                Address = result.Address,
+                CreatedAt = result.CreatedAt,
+                CreatedBy = result.CreatedBy,
+                ReasonForVisit = result.ReasonForVisit
+            };
+
+            return ApiResponseHelper.Success<PatientDto>(returnDto, ResponseConstants.PatientAddedMessage);
         }
+
 
         /// <summary>
         /// Updates an existing patient.

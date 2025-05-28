@@ -16,7 +16,7 @@ namespace PatientManagementSystemAPI.Controllers
         }
 
 
-        [HttpGet("getallpatients")]
+        [HttpGet("getAllPatients")]
         public async Task<IActionResult> GetAll()
         {
             var patients = await patientService.GetAllAsync();
@@ -33,14 +33,14 @@ namespace PatientManagementSystemAPI.Controllers
             return Ok(patient);
         }
 
-        [HttpPost("addpatient")]
+        [HttpPost("AddPatient")]
         public async Task<IActionResult> Add( PatientDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await patientService.AddAsync(dto);
-            return Ok("Patient created successfully");
+            var result = await patientService.AddAsync(dto);
+            return Ok(result);
         }
 
         [HttpPut("{id}")]

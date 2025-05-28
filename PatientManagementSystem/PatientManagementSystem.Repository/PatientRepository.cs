@@ -39,10 +39,11 @@ namespace PatientManagementSystem.Repository
         /// <summary>
         /// Adds a new patient record.
         /// </summary>
-        public async Task AddAsync(Patient patient)
+        public async Task<Patient?> AddAsync(Patient patient)
         {
             await context.Patients.AddAsync(patient);
             await context.SaveChangesAsync();
+            return patient;
         }
 
         /// <summary>

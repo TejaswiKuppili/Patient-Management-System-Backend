@@ -1,4 +1,5 @@
-﻿using PatientManagementSystem.Data.Entities;
+﻿using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Repository.Interfaces
 {
@@ -8,7 +9,7 @@ namespace PatientManagementSystem.Repository.Interfaces
         Task UpdateAsync(Patient patient);
         Task<Patient?> GetByIdAsync(int id);
         Task<List<Patient>> GetAllAsync();
-        Task AddAsync(Patient patient);
+        Task<Patient> AddAsync(Patient patient);
 
     }
 }

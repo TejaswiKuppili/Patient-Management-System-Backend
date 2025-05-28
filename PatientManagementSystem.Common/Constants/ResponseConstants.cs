@@ -80,5 +80,8 @@
         /// Message indicating that the user does not have the necessary authentication or authorization to access a resource.
         /// </summary>
         public const string UnauthorizedAccess = "Unauthorized access.";
+
+        public const string PatientsFetchedMessage = "Patient details fetched successfully!!";
+        public const string PatientAddedMessage = "Patient added successfully";
     }
 }
