@@ -4841,23 +4841,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\": {},
+    "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+      "projectUniqueName": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
       "projectName": "PatientManagementSystemAPI",
-      "projectPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
-      "packagesPath": "C:\\Users\\Tejaswi Kuppili\\.nuget\\packages\\",
-      "outputPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
+      "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+      "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
+      "outputPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tejaswi Kuppili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pranitha Alluri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4872,17 +4872,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-              "projectPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+            "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+              "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
             },
-            "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
-              "projectPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+            "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+              "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
             },
-            "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
-              "projectPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+            "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+              "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
             },
-            "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
-              "projectPath": "D:\\React\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
+            "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+              "projectPath": "D:\\PatientManagementSystem\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
             }
           }
         }
@@ -4897,7 +4897,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -4951,7 +4951,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
