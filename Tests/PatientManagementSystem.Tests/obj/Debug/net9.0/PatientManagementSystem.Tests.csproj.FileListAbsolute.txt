@@ -322,3 +322,10 @@ D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManage
 D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\obj\Debug\net9.0\PatientManagementSystem.Tests.pdb
 D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\obj\Debug\net9.0\PatientManagementSystem.Tests.genruntimeconfig.cache
 D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\obj\Debug\net9.0\ref\PatientManagementSystem.Tests.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Features.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.Extensions.ObjectPool.dll
+D:\PatientManagementSystem\Patient-Management-System-Backend\Tests\PatientManagementSystem.Tests\bin\Debug\net9.0\Microsoft.Net.Http.Headers.dll

@@ -1,10 +1,11 @@
-﻿using PatientManagementSystem.Data.DataContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PatientManagementSystem.Data.DataContext;
 using PatientManagementSystem.Data.Entities;
 using PatientManagementSystem.Repository.Interfaces;
 
 namespace PatientManagementSystem.Data.Repositories
 {
-    public class RefreshTokenRepository : IRefreshTokenRepository 
+    public class RefreshTokenRepository : IRefreshTokenRepository
     {
         private readonly ApplicationDbContext context;
 
@@ -13,29 +14,27 @@ namespace PatientManagementSystem.Data.Repositories
             this.context = context;
         }
 
-        public void SaveRefreshToken(RefreshToken refreshToken)
+        public async Task SaveRefreshTokenAsync(RefreshToken refreshToken)
         {
-            context.RefreshTokens.Add(refreshToken);
-            context.SaveChanges();
+            await context.RefreshTokens.AddAsync(refreshToken);
+            await context.SaveChangesAsync();
         }
 
-        public RefreshToken GetByToken(string token)
+        public async Task<RefreshToken> GetByTokenAsync(string token)
         {
-            return context.RefreshTokens.FirstOrDefault(rt => rt.Token == token && !rt.IsRevoked);
+            return await context.RefreshTokens.FirstOrDefaultAsync(rt => rt.Token == token && !rt.IsRevoked);
         }
 
-        public void RevokeToken(string token)
+        public async Task RevokeTokenAsync(RefreshToken refreshToken)
         {
-            var refreshToken = GetByToken(token);
-            if (refreshToken != null)
-            {
-                refreshToken.IsRevoked = true;
-            }
+            refreshToken.IsRevoked = true;
+            context.RefreshTokens.Update(refreshToken);
+            await context.SaveChangesAsync();
         }
 
-        public void SaveChanges()
+        public async Task SaveChangesAsync()
         {
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
     }
 }

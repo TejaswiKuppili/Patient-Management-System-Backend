@@ -4,6 +4,7 @@ using PatientManagementSystem.Services.Interfaces;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.Helpers;
 using Microsoft.Extensions.Logging;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Services
 {

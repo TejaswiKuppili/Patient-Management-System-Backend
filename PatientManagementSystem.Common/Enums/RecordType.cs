@@ -6,6 +6,6 @@
     public enum RecordType
     {
         LabReport,
-        Prescription
+        Prescription 
     }
 }
