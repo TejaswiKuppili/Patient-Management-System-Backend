@@ -1,12 +1,13 @@
 ﻿using PatientManagementSystem.Data.Entities;
+using System.Threading.Tasks;
+
 namespace PatientManagementSystem.Repository.Interfaces
 {
     public interface IRefreshTokenRepository
     {
-        void SaveRefreshToken(RefreshToken refreshToken);
-        RefreshToken GetByToken(string token);
-        void SaveChanges();
-        void RevokeToken(string token);
-
+        Task SaveRefreshTokenAsync(RefreshToken refreshToken);
+        Task<RefreshToken> GetByTokenAsync(string token);
+        Task RevokeTokenAsync(RefreshToken refreshToken);
+        Task SaveChangesAsync();
     }
 }

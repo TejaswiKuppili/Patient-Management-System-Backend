@@ -37,6 +37,8 @@ namespace PatientManagementSystem.Data.Entities
         //
         [Required]
         public int CreatedBy { get; set; } // FK -> Employees.Id
+        [Required]
+        public string ReasonForVisit { get;set; }
 
         [ForeignKey(nameof(CreatedBy))]
         public Employee CreatedByEmployee { get; set; } = null!; // Navigation property to Employee

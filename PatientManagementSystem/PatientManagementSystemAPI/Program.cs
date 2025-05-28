@@ -36,10 +36,12 @@ namespace PatientManagementSystemAPI
             // Register Repositories
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            builder.Services.AddScoped<IPatientRepository, PatientRepository>();
             // Register Services
             builder.Services.AddScoped<IAuthService, AuthService>(); 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IPatientService, PatientService>();
             builder.Services.AddControllers();
     
             builder.Services.AddHttpContextAccessor(); 

@@ -119,6 +119,7 @@ namespace PatientManagementSystem.Data.DataContext
                 entity.Property(p => p.ContactNumber).IsRequired().HasMaxLength(20);
                 entity.Property(p => p.Address).HasMaxLength(300);
                 entity.Property(p => p.CreatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(p => p.ReasonForVisit).IsRequired();
             });
 
             // Appointments

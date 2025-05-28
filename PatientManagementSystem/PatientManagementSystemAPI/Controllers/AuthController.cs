@@ -14,9 +14,11 @@ namespace PatientManagementSystemAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService authService;
-        public AuthController(IAuthService authService)
+        private readonly ITokenService tokenService;
+        public AuthController(IAuthService authService, ITokenService tokenService)
         {
             this.authService = authService;
+            this.tokenService = tokenService;
         }
         /// <summary>
         /// Logins user by validating credentials and generating JWT tokens for access and refresh.
@@ -47,5 +49,20 @@ namespace PatientManagementSystemAPI.Controllers
 
             return Ok(ApiResponseHelper.Success(result, message: ResponseConstants.LoginSuccess));
         }
+        ///// <summary>
+        ///// Generates a new access token using the provided refresh token, if valid.
+        ///// </summary>
+        ///// <param name="request"></param>
+        ///// <returns></returns>
+        //[HttpPost("refresh-token")]
+        //public async Task<IActionResult> RefreshToken([FromBody] LoginResponseDto request)
+        //{
+        //    var result = await tokenService.VerifyAndGenerateTokenAsync(request);
+        //    if (result == null)
+        //        return Unauthorized("Invalid or expired refresh token.");
+
+        //    return Ok(result);
+        //}
+
     }
 }

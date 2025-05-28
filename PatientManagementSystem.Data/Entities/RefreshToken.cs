@@ -1,6 +1,9 @@
 ﻿
 namespace PatientManagementSystem.Data.Entities
 {
+    /// <summary>
+    /// Represents a refresh token used for maintaining user sessions and authentication.
+    /// </summary>
     public class RefreshToken
     {
         public int Id { get; set; }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Data.Entities;
@@ -9,47 +10,51 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.Extensions.Logging;
+
+
 namespace PatientManagementSystem.Services
 {
-    /// <summary>
-    /// Generates JWT access and refresh tokens for user authentication.
-    /// </summary>
     public class TokenService : ITokenService
     {
         private readonly IConfiguration configuration;
         private readonly IRefreshTokenRepository refreshTokenRepository;
+        private readonly IUserRepository userRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
+       // private readonly IJwtHelper jwtHelper;
         private readonly ILogger<TokenService> logger;
-        public TokenService(IConfiguration configuration, IRefreshTokenRepository refreshTokenRepository, IHttpContextAccessor httpContextAccessor, ILogger<TokenService> logger)
+
+        public TokenService(
+            IConfiguration configuration,
+            IRefreshTokenRepository refreshTokenRepository,
+            IUserRepository userRepository,
+            IHttpContextAccessor httpContextAccessor,
+         //   IJwtHelper jwtHelper,
+            ILogger<TokenService> logger)
         {
             this.configuration = configuration;
             this.refreshTokenRepository = refreshTokenRepository;
+            this.userRepository = userRepository;
             this.httpContextAccessor = httpContextAccessor;
+         //   this.jwtHelper = jwtHelper;
             this.logger = logger;
         }
-        /// <summary>
-        /// Generates a JWT access token for the specified user.
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns>Token string</returns>
+
         public string GenerateAccessToken(UserDto user)
         {
             try
             {
-                byte[]? key = Encoding.UTF8.GetBytes(configuration["Jwt:Key"]);
-                JwtSecurityTokenHandler? tokenHandler = new JwtSecurityTokenHandler();
+                byte[] key = Encoding.UTF8.GetBytes(configuration["Jwt:Key"]);
+                var tokenHandler = new JwtSecurityTokenHandler();
 
-
-                SecurityTokenDescriptor? tokenDescriptor = new SecurityTokenDescriptor
+                var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new[]
                     {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, user.RoleName)
-                }),
+                        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                        new Claim(ClaimTypes.Name, user.Name),
+                        new Claim(ClaimTypes.Email, user.Email),
+                        new Claim(ClaimTypes.Role, user.RoleName)
+                    }),
                     Expires = DateTime.UtcNow.AddMinutes(double.Parse(configuration["Jwt:AccessTokenExpiryMinutes"])),
                     SigningCredentials = new SigningCredentials(
                         new SymmetricSecurityKey(key),
@@ -58,31 +63,26 @@ namespace PatientManagementSystem.Services
                     Audience = configuration["Jwt:Audience"]
                 };
 
-
-                SecurityToken? token = tokenHandler.CreateToken(tokenDescriptor);
+                var token = tokenHandler.CreateToken(tokenDescriptor);
                 return tokenHandler.WriteToken(token);
             }
             catch (Exception ex)
             {
                 logger.LogError(ex, "Error generating access token for user {UserId}", user.Id);
-                throw new InvalidOperationException("Failed to generate access token", ex);
+                throw;
             }
         }
-        /// <summary>
-        /// Generates a refresh token for the specified user and saves it to the database.
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns>Token string</returns>
+
         public string GenerateRefreshToken(UserDto user)
         {
             try
             {
-                byte[]? randomBytes = new byte[64];
-                using RandomNumberGenerator? rng = RandomNumberGenerator.Create();
+                byte[] randomBytes = new byte[64];
+                using var rng = RandomNumberGenerator.Create();
                 rng.GetBytes(randomBytes);
-                string? token = Convert.ToBase64String(randomBytes);
+                string token = Convert.ToBase64String(randomBytes);
 
-                RefreshToken? refreshToken = new RefreshToken
+                var refreshToken = new RefreshToken
                 {
                     Token = token,
                     ExpiresAt = DateTime.UtcNow.AddDays(double.Parse(configuration["Jwt:RefreshTokenExpiryDays"])),
@@ -92,16 +92,54 @@ namespace PatientManagementSystem.Services
                     IsRevoked = false
                 };
 
-                refreshTokenRepository.SaveRefreshToken(refreshToken);
-
-
+                refreshTokenRepository.SaveRefreshTokenAsync(refreshToken);
                 return token;
             }
             catch (Exception ex)
             {
                 logger.LogError(ex, "Error generating refresh token for user {UserId}", user.Id);
-                throw new InvalidOperationException("Failed to generate refresh token", ex);
+                throw;
             }
         }
+
+        //public async Task<LoginResponseDto> VerifyAndGenerateTokenAsync(LoginResponseDto request)
+        //{
+        //    var principal = jwtHelper.GetPrincipalFromExpiredToken(request.AccessToken);
+        //    if (principal == null)
+        //        return null;
+
+        //    var storedToken = await refreshTokenRepository.GetByTokenAsync(request.RefreshToken);
+        //    if (storedToken == null || storedToken.IsRevoked || storedToken.ExpiresAt < DateTime.UtcNow)
+        //        return null;
+
+        //    // Revoke current token
+        //    storedToken.IsRevoked = true;
+        //    await refreshTokenRepository.RevokeTokenAsync(storedToken);
+
+        //    var userIdClaim = principal.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+        //    if (!int.TryParse(userIdClaim, out int userId))
+        //        return null;
+
+        //    var userEntity = await userRepository.GetByIdAsync(userId);
+        //    if (userEntity == null)
+        //        return null;
+
+        //    var userDto = new UserDto
+        //    {
+        //        Id = userEntity.Id,
+        //        Name = userEntity.Name,
+        //        Email = userEntity.Email,
+        //        RoleName = userEntity.Role.Name
+        //    };
+
+        //    string newAccessToken = GenerateAccessToken(userDto);
+        //    string newRefreshToken = GenerateRefreshToken(userDto);
+
+        //    return new LoginResponseDto
+        //    {
+        //        AccessToken = newAccessToken,
+        //        RefreshToken = newRefreshToken
+        //    };
+        //}
     }
 }
