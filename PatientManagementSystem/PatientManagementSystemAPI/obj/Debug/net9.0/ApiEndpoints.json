@@ -71,7 +71,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.PatientController",
     "Method": "Add",
-    "RelativePath": "api/Patient/AddPatient",
+    "RelativePath": "api/Patient/addPatient",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

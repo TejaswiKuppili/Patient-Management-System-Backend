@@ -38,11 +38,12 @@ public class AuthService : IAuthService
 
             string accessToken = tokenService.GenerateAccessToken(user);
             string refreshToken = tokenService.GenerateRefreshToken(user);
-
+            int id = user.Id;
             return new LoginResponseDto
             {
                 AccessToken = accessToken,
-                RefreshToken = refreshToken
+                RefreshToken = refreshToken,
+                UserId = id
             };
         }
         catch (Exception ex)
