@@ -1,4 +1,5 @@
 ﻿using PatientManagementSystem.Common.DTOs;
+
 namespace PatientManagementSystem.Services.Interfaces
 {
     /// <summary>
@@ -13,7 +14,7 @@ namespace PatientManagementSystem.Services.Interfaces
         Task<ApiResponse<string>> UpdateUserRoleAsync(int userId, string newRoleName);
         Task<UserDto> ValidateUserAsync(string email, string password);
 
-       
+        Task<ApiResponse<UserIdResponseDto>> GetUserByIdAsync(int userId);
 
     }
 }

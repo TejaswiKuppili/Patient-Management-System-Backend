@@ -134,6 +134,14 @@ namespace PatientManagementSystem.Repository
             };
         }
 
+
+        public async Task<ApplicationUser?> GetUserDetailsAsync(int userId)
+        {
+            return await context.ApplicationUsers
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
     }
 }
 

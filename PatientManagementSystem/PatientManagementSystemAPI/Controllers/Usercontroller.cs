@@ -67,5 +67,21 @@ namespace PatientManagementSystemAPI.Controllers
             ApiResponse<string> response = await userService.UpdateUserRoleAsync(userId, request.Role);
             return Ok(response);
         }
+
+        /// <summary>
+        /// Retrieves a user by their ID.
+        /// </summary>
+        /// <param name="userId">The ID of the user.</param>
+        /// <returns>User details if found.</returns>
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetUserById(int userId)
+        {
+            ApiResponse<UserIdResponseDto>? response = await userService.GetUserByIdAsync(userId);
+            if (!response.Success)
+                return NotFound(response);
+
+            return Ok(response);
+        }
+
     }
 }

@@ -96,6 +96,22 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
+    "Method": "GetUserById",
+    "RelativePath": "api/Users/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
     "Method": "CreateUserAsync",
     "RelativePath": "api/Users/create",
     "HttpMethod": "POST",

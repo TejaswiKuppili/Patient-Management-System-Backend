@@ -1,4 +1,5 @@
 ﻿using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Repository.Interfaces
 {
@@ -8,10 +9,11 @@ namespace PatientManagementSystem.Repository.Interfaces
     public interface IUserRepository
     {
         Task<UserDto?> GetUserByEmailAsync(string email);
-
         Task<UserAndRoleDto> GetUsersAndRolesAsync();
         Task<UserDto> CreateUserAsync(UserDto newUser);
-        Task UpdateUserRoleAsync(int userId, string newRoleName);
+        Task<ApplicationUser?> GetUserDetailsAsync(int userId);
+        Task UpdateUserRoleAsync(int userId, string newRoleName); 
+
     }
 
 }

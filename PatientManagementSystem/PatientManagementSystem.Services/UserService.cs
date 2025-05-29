@@ -2,6 +2,7 @@
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Common.Helpers;
+using PatientManagementSystem.Data.Entities;
 using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 
@@ -130,6 +131,47 @@ namespace PatientManagementSystem.Services
             }
 
         }
+        /// <summary>
+        /// Gets User details by their ID.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task<ApiResponse<UserIdResponseDto>> GetUserByIdAsync(int userId)
+        {
+            try
+            {
+                ApplicationUser? user = await userRepository.GetUserDetailsAsync(userId);
+
+                if (user == null)
+                {
+                    return ApiResponseHelper.Fail<UserIdResponseDto>(
+                        "User not found.",
+                        ResponseConstants.NotFound
+                    );
+                }
+
+                UserIdResponseDto dto = new UserIdResponseDto
+                {
+                    Id = user.Id,
+                    Name = user.Username,
+                    Email = user.Email,
+                    RoleName = user.Role?.Name
+                };
+
+                return ApiResponseHelper.Success(dto, ResponseConstants.UserFetchedMessage);
+            }
+            catch (Exception ex)
+            {
+                
+                return ApiResponseHelper.Fail<UserIdResponseDto>(
+                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    ResponseConstants.InternalServerError
+                );
+            }
+        }
+
+
+
 
     }
 }
