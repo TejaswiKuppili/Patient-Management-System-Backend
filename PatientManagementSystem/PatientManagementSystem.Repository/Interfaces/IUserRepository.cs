@@ -1,5 +1,4 @@
 ﻿using PatientManagementSystem.Common.DTOs;
-using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Repository.Interfaces
 {

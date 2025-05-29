@@ -1,10 +1,9 @@
-﻿using PatientManagementSystem.Common.DTOs;
+﻿using Microsoft.Extensions.Logging;
+using PatientManagementSystem.Common.Constants;
+using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Common.Helpers;
 using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
-using PatientManagementSystem.Common.Constants;
-using PatientManagementSystem.Common.Helpers;
-using Microsoft.Extensions.Logging;
-using PatientManagementSystem.Data.Entities;
 
 namespace PatientManagementSystem.Services
 {

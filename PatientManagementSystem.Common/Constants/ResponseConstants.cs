@@ -81,7 +81,24 @@
         /// </summary>
         public const string UnauthorizedAccess = "Unauthorized access.";
 
+        /// <summary>
+        /// Message indicating that patient details were fetched successfully.
+        /// </summary>
         public const string PatientsFetchedMessage = "Patient details fetched successfully!!";
+
+        /// <summary>
+        /// Message indicating that a patient was added successfully.
+        /// </summary>
         public const string PatientAddedMessage = "Patient added successfully";
+
+        /// <summary>
+        /// Message indicating that fetching patient details failed.
+        /// </summary>
+        public const string PatientsFetchFailedMessage= "Failed to fetch patient details";
+
+        /// <summary>
+        /// Message indicating that adding patient details failed.
+        /// </summary>
+        public const string PatientAddFailedMessage="Failed to add patient details";
     }
 }

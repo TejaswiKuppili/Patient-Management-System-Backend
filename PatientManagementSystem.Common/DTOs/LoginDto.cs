@@ -2,6 +2,9 @@
 
 namespace PatientManagementSystem.Common.DTOs
 {
+    /// <summary>
+    /// Data Transfer Object for user login information.
+    /// </summary>
     public class LoginDto
     {
         [Required]

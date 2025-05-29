@@ -71,7 +71,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.PatientController",
     "Method": "Add",
-    "RelativePath": "api/Patient/addpatient",
+    "RelativePath": "api/Patient/AddPatient",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -87,7 +87,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.PatientController",
     "Method": "GetAll",
-    "RelativePath": "api/Patient/getallpatients",
+    "RelativePath": "api/Patient/getAllPatients",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -136,6 +136,22 @@
       {
         "Name": "request",
         "Type": "PatientManagementSystem.Common.DTOs.UpdateUserRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.VitalController",
+    "Method": "GetVitals",
+    "RelativePath": "api/Vital/getVitals/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

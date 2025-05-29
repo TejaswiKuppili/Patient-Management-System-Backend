@@ -2,6 +2,9 @@
 
 namespace PatientManagementSystem.Services.Interfaces
 {
+    /// <summary>
+    /// Contract for token generation services.
+    /// </summary>
     public interface ITokenService
     {
         string GenerateAccessToken(UserDto user);

@@ -13,7 +13,9 @@ using System.Text;
 
 
 namespace PatientManagementSystem.Services
-{
+{   /// <summary>
+/// Service for generating JWT access and refresh tokens.
+/// </summary>
     public class TokenService : ITokenService
     {
         private readonly IConfiguration configuration;
@@ -39,6 +41,11 @@ namespace PatientManagementSystem.Services
             this.logger = logger;
         }
 
+        /// <summary>
+        /// Generates a JWT access token for the specified user.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public string GenerateAccessToken(UserDto user)
         {
             try
@@ -72,7 +79,11 @@ namespace PatientManagementSystem.Services
                 throw;
             }
         }
-
+        /// <summary>
+        /// Generates a refresh token for the specified user and saves it to the database.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public string GenerateRefreshToken(UserDto user)
         {
             try

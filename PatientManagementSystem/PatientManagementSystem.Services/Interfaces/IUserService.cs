@@ -1,9 +1,8 @@
 ﻿using PatientManagementSystem.Common.DTOs;
-using PatientManagementSystem.Data.Entities;
 namespace PatientManagementSystem.Services.Interfaces
 {
     /// <summary>
-    /// Defines user-related business logic.
+    /// Contract for user-related services.
     /// </summary>
     public interface IUserService
     {

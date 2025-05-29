@@ -20,10 +20,10 @@ namespace PatientManagementSystem.Data.Entities
         public string LastName { get; set; } = null!; // NVARCHAR(100), NOT NULL
 
         [Required]
-        public DateTime DateOfBirth { get; set; } // DATE, NOT NULL
+        public DateOnly DateOfBirth { get; set; } // DATE, NOT NULL
 
-       
-        public string Gender { get; set; }  // NVARCHAR(10), NOT NULL
+
+        public string Gender { get; set; } = null!; // NVARCHAR(10), NOT NULL
 
         [Required]
         [MaxLength(20)]
@@ -34,11 +34,11 @@ namespace PatientManagementSystem.Data.Entities
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.Now; // DATETIME, DEFAULT GETDATE()
-        //
+        
         [Required]
         public int CreatedBy { get; set; } // FK -> Employees.Id
         [Required]
-        public string ReasonForVisit { get;set; }
+        public string ReasonForVisit { get; set; } = null!;
 
         [ForeignKey(nameof(CreatedBy))]
         public Employee CreatedByEmployee { get; set; } = null!; 

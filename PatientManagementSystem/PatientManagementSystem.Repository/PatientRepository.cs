@@ -1,7 +1,6 @@
-﻿using PatientManagementSystem.Common.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
 using PatientManagementSystem.Data.DataContext;
 using PatientManagementSystem.Data.Entities;
-using Microsoft.EntityFrameworkCore;
 using PatientManagementSystem.Repository.Interfaces;
 
 namespace PatientManagementSystem.Repository
@@ -9,6 +8,9 @@ namespace PatientManagementSystem.Repository
     public class PatientRepository:IPatientRepository
 
     {
+        /// <summary>
+        /// Repository for managing patient records in the database.
+        /// </summary>
         private readonly ApplicationDbContext context;
 
         public PatientRepository(ApplicationDbContext context)

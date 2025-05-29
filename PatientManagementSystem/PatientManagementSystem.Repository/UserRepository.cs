@@ -111,7 +111,11 @@ namespace PatientManagementSystem.Repository
             await context.SaveChangesAsync();
         }
 
-
+        /// <summary>
+        /// Fetches a user by their email address.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public async Task<UserDto?> GetUserByEmailAsync(string email)
         {
             var user = await context.ApplicationUsers

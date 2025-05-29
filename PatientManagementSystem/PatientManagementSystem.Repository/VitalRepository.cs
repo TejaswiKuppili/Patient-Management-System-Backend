@@ -5,6 +5,9 @@ using PatientManagementSystem.Repository.Interfaces;
 
 namespace PatientManagementSystem.Repository
 {
+    /// <summary>
+    /// Repository for managing vital signs data operations.
+    /// </summary>
     public class VitalRepository : IVitalRepository
     {
         private readonly ApplicationDbContext context;
@@ -13,7 +16,11 @@ namespace PatientManagementSystem.Repository
         {
             this.context = context;
         }
-
+        /// <summary>
+        /// Retrieves a list of vital signs for a specific patient, ordered by the date they were recorded.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
         public async Task<List<Vital>> GetVitalsByPatientIdAsync(int patientId)
         {
             return await context.Vitals

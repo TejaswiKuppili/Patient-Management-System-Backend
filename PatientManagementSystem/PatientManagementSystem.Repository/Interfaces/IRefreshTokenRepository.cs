@@ -1,8 +1,10 @@
 ﻿using PatientManagementSystem.Data.Entities;
-using System.Threading.Tasks;
 
 namespace PatientManagementSystem.Repository.Interfaces
 {
+    /// <summary>
+    /// Interface for refresh token repository operations.
+    /// </summary>
     public interface IRefreshTokenRepository
     {
         Task SaveRefreshTokenAsync(RefreshToken refreshToken);

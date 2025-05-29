@@ -7,7 +7,9 @@ using PatientManagementSystem.Services.Interfaces;
 using PatientManagementSystemAPI.Common.DTOs;
 
 namespace PatientManagementSystem.Services
-{
+{   /// <summary>
+    /// Service for managing patient vitals.
+    /// </summary>
     public class VitalService : IVitalService
     {
         private readonly IVitalRepository vitalRepository;
@@ -16,7 +18,11 @@ namespace PatientManagementSystem.Services
         {
             this.vitalRepository = vitalRepository;
         }
-
+        /// <summary>
+        /// Fetches the vitals for a specific patient by their ID.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
         public async Task<ApiResponse<List<VitalDto>>> GetVitalsAsync(int patientId)
         {
             try
