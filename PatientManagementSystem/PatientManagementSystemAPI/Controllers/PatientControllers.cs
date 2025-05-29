@@ -49,7 +49,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        [HttpPost("AddPatient")]
+        [HttpPost("addPatient")]
         public async Task<IActionResult> Add( PatientDto dto)
         {
             if (!ModelState.IsValid)
