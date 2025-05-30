@@ -105,3 +105,18 @@ D:\PMS-Backend(before merge of tests and assignroles)\Patient-Management-System-
 D:\PMS-Backend(before merge of tests and assignroles)\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.pdb
 D:\PMS-Backend(before merge of tests and assignroles)\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.genruntimeconfig.cache
 D:\PMS-Backend(before merge of tests and assignroles)\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\ref\PatientManagementSystem.Data.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.deps.json
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.runtimeconfig.json
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\bin\Debug\net9.0\PatientManagementSystem.Data.pdb
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.csproj.AssemblyReference.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.AssemblyInfoInputs.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.AssemblyInfo.cs
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.sourcelink.json
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\refint\PatientManagementSystem.Data.dll
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.pdb
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\PatientManagementSystem.Data.genruntimeconfig.cache
+C:\Users\Pranitha Alluri\OneDrive - COGNINE\Desktop\PMS-api\Patient-Management-System-Backend\PatientManagementSystem.Data\obj\Debug\net9.0\ref\PatientManagementSystem.Data.dll
