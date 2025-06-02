@@ -168,6 +168,11 @@ namespace PatientManagementSystem.Data.DataContext
                       .HasForeignKey(v => v.PatientId)
                       .OnDelete(DeleteBehavior.NoAction)
                       .IsRequired();
+                entity.HasOne(p => p.CreatedByEmployee)
+            .WithMany()
+          .HasForeignKey(p => p.CreatedBy)
+          .OnDelete(DeleteBehavior.NoAction)
+          .IsRequired(); 
             });
 
 

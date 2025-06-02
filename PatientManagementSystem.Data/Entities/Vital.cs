@@ -34,6 +34,6 @@ namespace PatientManagementSystem.Data.Entities
         public int CreatedBy { get; set; } // FK -> Employees.Id
 
         [ForeignKey(nameof(CreatedBy))]
-        public Employee CreatedByEmployee { get; set; } = null!; // Navigation
+        public ApplicationUser CreatedByEmployee { get; set; } = null!; // Navigation
     }
 }
