@@ -31,5 +31,7 @@ namespace PatientManagementSystem.Data.Entities
         public Role Role { get; set; } = null!;
         public ICollection<RefreshToken> RefreshTokens { get; set; }
 
+        public ICollection<Patient> PatientsCreated { get; set; } = new List<Patient>();
+
     }
 }

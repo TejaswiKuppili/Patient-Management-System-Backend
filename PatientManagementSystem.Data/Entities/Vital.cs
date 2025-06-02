@@ -29,7 +29,7 @@ namespace PatientManagementSystem.Data.Entities
         public decimal? Temperature { get; set; } // Nullable: Celsius
 
         public int? RespiratoryRate { get; set; } // Nullable: breaths per minute
-        //
+        
         [Required]
         public int CreatedBy { get; set; } // FK -> Employees.Id
 

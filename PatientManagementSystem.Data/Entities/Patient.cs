@@ -41,7 +41,7 @@ namespace PatientManagementSystem.Data.Entities
         public string ReasonForVisit { get; set; } = null!;
 
         [ForeignKey(nameof(CreatedBy))]
-        public Employee CreatedByEmployee { get; set; } = null!; 
+        public ApplicationUser CreatedByEmployee { get; set; } = null!; 
         public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
         public ICollection<MedicalRecord> MedicalRecords { get; set; } = new List<MedicalRecord>();
         public ICollection<Vital> Vitals { get; set; } = new List<Vital>();

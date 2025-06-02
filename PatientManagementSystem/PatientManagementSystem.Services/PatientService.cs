@@ -39,7 +39,7 @@ namespace PatientManagementSystem.Services
                     CreatedAt = p.CreatedAt,
                     CreatedBy = p.CreatedBy,
                     ReasonForVisit = p.ReasonForVisit,
-                    CreatedByEmployeeName = p.CreatedByEmployee != null ? p.CreatedByEmployee.FullName : "Unknown"
+                    CreatedByEmployeeName = p.CreatedByEmployee != null ? p.CreatedByEmployee.Username : "Unknown"
                 }).ToList();
 
                 return ApiResponseHelper.Success(result, ResponseConstants.PatientsFetchedMessage);
@@ -73,7 +73,7 @@ namespace PatientManagementSystem.Services
                     CreatedAt = patient.CreatedAt,
                     CreatedBy = patient.CreatedBy,
                     ReasonForVisit = patient.ReasonForVisit,
-                    CreatedByEmployeeName = patient.CreatedByEmployee?.FullName 
+                    CreatedByEmployeeName = patient.CreatedByEmployee?.Username
                 };
 
                 return ApiResponseHelper.Success<PatientDto?>(dto, ResponseConstants.PatientsFetchedMessage);

@@ -120,7 +120,14 @@ namespace PatientManagementSystem.Data.DataContext
                 entity.Property(p => p.Address).HasMaxLength(300);
                 entity.Property(p => p.CreatedAt).HasDefaultValueSql("GETDATE()");
                 entity.Property(p => p.ReasonForVisit).IsRequired();
-            });
+
+                
+        entity.HasOne(p => p.CreatedByEmployee)
+            .WithMany(u => u.PatientsCreated)
+          .HasForeignKey(p => p.CreatedBy)
+          .OnDelete(DeleteBehavior.NoAction)
+          .IsRequired();
+    });
 
             // Appointments
             modelBuilder.Entity<Appointment>(entity =>

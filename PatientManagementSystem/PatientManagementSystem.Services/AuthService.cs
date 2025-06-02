@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
 using PatientManagementSystem.Common.DTOs;
-using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 
 /// <summary>
