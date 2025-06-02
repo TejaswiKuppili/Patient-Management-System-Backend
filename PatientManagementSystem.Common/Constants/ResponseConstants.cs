@@ -109,6 +109,11 @@
         /// <summary>
         /// Message indicating that Vital data has been added successfully
         /// </summary>
-        public const string VitalSuccessMessage = "Added Vital data Successfully";
+        public const string VitalSuccessMessage = "Added vital data successfully";
+
+        /// <summary>
+        /// Message  indicating that fetching vital details successfully.
+        /// </summary>
+        public const string VitalFetchedSuccessMessage = "Vitals fetched successfully";
     }
 }

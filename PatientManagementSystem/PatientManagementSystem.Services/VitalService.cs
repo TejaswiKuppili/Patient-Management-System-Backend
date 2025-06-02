@@ -46,7 +46,7 @@ namespace PatientManagementSystem.Services
                     return ApiResponseHelper.Fail<List<VitalDto>>(ResponseConstants.NoUsersFoundMessage, ResponseConstants.NotFound);
                 }
 
-                return ApiResponseHelper.Success<List<VitalDto>>(data, ResponseConstants.PatientsFetchedMessage);
+                return ApiResponseHelper.Success<List<VitalDto>>(data, ResponseConstants.VitalFetchedSuccessMessage);
             }
             catch (Exception ex)
             {
