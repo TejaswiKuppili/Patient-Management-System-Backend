@@ -27,5 +27,13 @@ namespace PatientManagementSystemAPI.Controllers
             ApiResponse<List<VitalDto>> response = await vitalService.GetVitalsAsync(patientId);
             return StatusCode(response.StatusCode, response);
         }
+        [HttpPost("addVitals")]
+        public async Task<IActionResult> AddVitals([FromBody] VitalDto vitalDto)
+        {
+            ApiResponse<bool> response = await vitalService.AddVitalsAsync(vitalDto);
+            return StatusCode(response.StatusCode, response);
+        }
+
     }
+
 }

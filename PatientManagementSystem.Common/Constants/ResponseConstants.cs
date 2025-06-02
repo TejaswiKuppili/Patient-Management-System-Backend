@@ -100,5 +100,15 @@
         /// Message indicating that adding patient details failed.
         /// </summary>
         public const string PatientAddFailedMessage="Failed to add patient details";
+
+        /// <summary>
+        /// Message Indicating that adding vital details failed
+        /// </summary>
+        public const string VitalFailedMessage = "Failed to add Vital Data";
+
+        /// <summary>
+        /// Message indicating that Vital data has been added successfully
+        /// </summary>
+        public const string VitalSuccessMessage = "Added Vital data Successfully";
     }
 }

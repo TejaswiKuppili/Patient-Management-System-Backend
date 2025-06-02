@@ -28,5 +28,20 @@ namespace PatientManagementSystem.Repository
                 .OrderByDescending(v => v.RecordedAt)
                 .ToListAsync();
         }
+
+
+      /// <summary>
+      /// Adds Vitals of Patients
+      /// </summary>
+      /// <param name="vital"></param>
+      /// <returns></returns>
+
+            public async Task<bool> AddVitalAsync(Vital vital)
+            {
+                context.Vitals.Add(vital);
+                return await context.SaveChangesAsync() > 0;
+            }
+        
+
     }
 }

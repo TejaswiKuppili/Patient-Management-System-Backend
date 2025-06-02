@@ -10,5 +10,6 @@ namespace PatientManagementSystem.Services.Interfaces
     public interface IVitalService
     {
         Task<ApiResponse<List<VitalDto>>> GetVitalsAsync(int patientId);
+        Task<ApiResponse<bool>> AddVitalsAsync(VitalDto vitalDto);
     }
 }

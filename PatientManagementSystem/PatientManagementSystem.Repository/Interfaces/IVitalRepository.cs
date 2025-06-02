@@ -8,5 +8,7 @@ namespace PatientManagementSystem.Repository.Interfaces
     public interface IVitalRepository
     {
         Task<List<Vital>> GetVitalsByPatientIdAsync(int patientId);
+        Task<bool> AddVitalAsync(Vital vital);
+
     }
 }

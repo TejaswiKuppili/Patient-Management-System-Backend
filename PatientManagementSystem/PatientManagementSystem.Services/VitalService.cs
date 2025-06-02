@@ -53,5 +53,41 @@ namespace PatientManagementSystem.Services
                 return ApiResponseHelper.Fail<List<VitalDto>>(ResponseConstants.GenericErrorMessage + ex.Message, ResponseConstants.InternalServerError);
             }
         }
+
+        /// <summary>
+        /// Adds new vitals for a patient.
+        /// </summary>
+        /// <param name="vitalDto">Vital data to add.</param>
+        /// <returns>Success or failure response.</returns>
+        public async Task<ApiResponse<bool>> AddVitalsAsync(VitalDto vitalDto)
+        {
+            try
+            {
+                Vital vital = new Vital
+                {
+                    PatientId = vitalDto.PatientId,
+                    RecordedAt = vitalDto.RecordedAt,
+                    BloodPressure = vitalDto.BloodPressure,
+                    HeartRate = vitalDto.HeartRate,
+                    Temperature = vitalDto.Temperature,
+                    RespiratoryRate = vitalDto.RespiratoryRate,
+                    CreatedBy = vitalDto.CreatedBy
+                };
+
+                bool result = await vitalRepository.AddVitalAsync(vital);
+
+                if (!result)
+                {
+                    return ApiResponseHelper.Fail<bool>(ResponseConstants.VitalFailedMessage, ResponseConstants.BadRequest);
+                }
+
+                return ApiResponseHelper.Success(true, ResponseConstants.VitalSuccessMessage);
+            }
+            catch (Exception ex)
+            {
+                return ApiResponseHelper.Fail<bool>(ResponseConstants.GenericErrorMessage + ex.Message, ResponseConstants.InternalServerError);
+            }
+        }
+
     }
 }

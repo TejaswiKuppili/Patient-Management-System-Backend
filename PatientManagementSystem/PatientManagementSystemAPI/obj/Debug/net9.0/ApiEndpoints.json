@@ -159,6 +159,22 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.VitalController",
+    "Method": "AddVitals",
+    "RelativePath": "api/Vital/addVitals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vitalDto",
+        "Type": "PatientManagementSystemAPI.Common.DTOs.VitalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.VitalController",
     "Method": "GetVitals",
     "RelativePath": "api/Vital/getVitals/{patientId}",
     "HttpMethod": "GET",
