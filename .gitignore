@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/PMS_POC/CopilotIndices/17.12.53.23981
+/PatientManagementSystem
+/PatientManagementSystem.Common/obj/Debug/net9.0
+/PatientManagementSystem.Data/obj/Debug/net9.0
