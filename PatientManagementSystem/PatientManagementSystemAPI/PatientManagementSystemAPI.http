@@ -1,0 +1,10 @@
+﻿@PatientManagementSystemAPI_HostAddress = https://localhost:7104
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/appointment
+Content-Type: application/json
+
+{
+  //Appointment
+}
+
+###
