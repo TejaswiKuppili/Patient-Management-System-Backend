@@ -1,19 +1,22 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Numerics;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using PatientManagementSystem.Common.DTOs;
 
-//namespace PatientManagementSystem.Repository.Interfaces
-//{
-//    public interface IDoctorRepository
-//    {
-//        Task<IEnumerable<Doctor>> GetAllAsync();
-//        Task<Doctor> GetByIdAsync(int id);
-//        Task AddAsync(Doctor doctor);
-//        Task UpdateAsync(Doctor doctor);
-//        Task DeleteAsync(Doctor doctor);
-//        Task<bool> ExistsAsync(int id);
-//    }
-//}
+namespace PatientManagementSystem.Repository.Interfaces
+{
+    public interface IDoctorRepository
+    {
+        /// <summary>
+        /// Gets all users who have a doctor role.
+        /// </summary>
+        Task<IEnumerable<DoctorDto>> GetAllAsync();
+
+        /// <summary>
+        /// Gets a single doctor by user ID if they have the doctor role.
+        /// </summary>
+        Task<DoctorDto?> GetByIdAsync(int id);
+
+        /// <summary>
+        /// Checks if a doctor with the given user ID exists.
+        /// </summary>
+        Task<bool> ExistsAsync(int id);
+    }
+}

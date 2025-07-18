@@ -1,69 +1,52 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using PatientManagementSystem.Services.Interfaces;
-//using PatientManagementSystem.Common.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
+using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Repository.Interfaces;
+using PatientManagementSystem.Services.Interfaces;
+namespace PatientManagementSystem.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class DoctorController : ControllerBase
+    {
+        private readonly IDoctorService doctorService;
 
-//namespace PatientManagementSystemAPI.Controllers
-//{
+        public DoctorController(IDoctorService doctorService)
+        {
+            this.doctorService = doctorService;
+        }
 
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class DoctorsController : ControllerBase
-//    {
-//        private readonly IDoctorService DoctorService;
+        /// <summary>
+        /// Get all doctors.
+        /// </summary>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<DoctorDto>>> GetAllDoctors()
+        {
+            var doctors = await doctorService.GetDoctorsAsync();
+            return Ok(doctors);
+        }
 
-//        public DoctorsController(IDoctorService doctorService)
-//        {
-//            DoctorService = doctorService;
-//        }
+        /// <summary>
+        /// Get doctor by ID.
+        /// </summary>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<DoctorDto>> GetDoctorById(int id)
+        {
+            var doctor = await doctorService.GetDoctorByIdAsync(id);
+            if (doctor == null)
+            {
+                return NotFound($"Doctor with ID {id} not found.");
+            }
+            return Ok(doctor);
+        }
 
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<DoctorDto>>> GetDoctors()
-//        {
-//            IEnumerable<DoctorDto> doctors = await DoctorService.GetDoctorsAsync();
-//            return Ok(doctors);
-//        }
-
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<DoctorDto>> GetDoctor(int id)
-//        {
-//            DoctorDto doctor = await DoctorService.GetDoctorByIdAsync(id);
-//            if (doctor == null)
-//            {
-//                return NotFound();
-//            }
-
-//            return Ok(doctor);
-//        }
-
-//        [HttpPost]
-//        public async Task<ActionResult<DoctorDto>> PostDoctor(DoctorDto doctor)
-//        {
-//            DoctorDto createdDoctor = await DoctorService.CreateDoctorAsync(doctor);
-//            return CreatedAtAction(nameof(GetDoctor), new { id = createdDoctor.Id }, createdDoctor);
-//        }
-
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutDoctor(int id, DoctorDto doctor)
-//        {
-//            bool success = await DoctorService.UpdateDoctorAsync(id, doctor);
-//            if (!success)
-//            {
-//                return NotFound();
-//            }
-
-//            return NoContent();
-//        }
-
-//        [HttpDelete("{id}")]
-//        public async Task<IActionResult> DeleteDoctor(int id)
-//        {
-//            bool success = await DoctorService.DeleteDoctorAsync(id);
-//            if (!success)
-//            {
-//                return NotFound();
-//            }
-
-//            return NoContent();
-//        }
-//    }
-//}
+        /// <summary>
+        /// Check if doctor exists by ID.
+        /// </summary>
+        [HttpGet("{id}/exists")]
+        public async Task<ActionResult<bool>> DoctorExists(int id)
+        {
+            bool exists = await doctorService.DoctorExistsAsync(id);
+            return Ok(exists);
+        }
+    }
+}
