@@ -36,6 +36,11 @@ namespace PatientManagementSystem.Repository
 
         public async Task AddAsync(Appointment appointment)
         {
+            appointment.Reason= await context.Patients
+            .Where(a => a.Id == appointment.PatientId)
+            .Select(a => a.ReasonForVisit)
+            .FirstOrDefaultAsync();
+
             context.Appointments.Add(appointment);
             await context.SaveChangesAsync();
         }

@@ -42,7 +42,7 @@ Content-Type: application/json
 
 ###
 
-@doctorId=1
+@doctorId=2
 GET {{PatientManagementSystemAPI_HostAddress}}/api/appointment/doctor/{{doctorId}}
 
 ###

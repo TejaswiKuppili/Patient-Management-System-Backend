@@ -86,7 +86,7 @@ namespace PatientManagementSystem.Common.Services
                     PatientId = appointment.PatientId,
                     AppointmentStartTime = appointment.AppointmentStartTime,
                     AppointmentEndTime = appointment.AppointmentEndTime,
-                    Reason = appointment.Reason,
+                    
                     Status = string.IsNullOrWhiteSpace(appointment.Status) ? "Scheduled" : appointment.Status,
                     CreatedAt = DateTime.Now,
                     CreatedBy = appointment.CreatedBy,
