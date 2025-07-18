@@ -28,10 +28,14 @@ namespace PatientManagementSystem.Common.Services
                 IEnumerable<AppointmentDto>? result = appointments.Select(appointment => new AppointmentDto
                 {
                     Id = appointment.Id,
+                    PatientId=appointment.PatientId,
                     PatientName = appointment.Patient?.FirstName + " " + appointment.Patient?.LastName,
                     AppointmentStartTime = appointment.AppointmentStartTime,
                     AppointmentEndTime = appointment.AppointmentEndTime,
-                    DoctorName = appointment.Doctor.Username
+                    DoctorName = appointment.Doctor.Username,
+                    DoctorId=appointment.Doctor.Id,
+                    CreatedBy=appointment.CreatedBy,
+                    Reason=appointment.Reason
                 });
 
                 return ApiResponseHelper.Success(result, ResponseConstants.AppointmentsFetchedMessage);

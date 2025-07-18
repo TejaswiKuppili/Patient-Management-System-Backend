@@ -17,7 +17,7 @@ namespace PatientManagementSystem.Repository
         public async Task<IEnumerable<DoctorDto>> GetAllAsync()
         {
             return await context.ApplicationUsers
-                .Where(u => u.RoleId == 2) // Doctor Role
+                .Where(u => u.RoleId == 2) 
                 .Include(u => u.Specialty)
                 .Select(u => new DoctorDto
                 {

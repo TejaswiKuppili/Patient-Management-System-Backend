@@ -16,7 +16,9 @@ namespace PatientManagementSystem.Repository
         public async Task<IEnumerable<Appointment>> GetByDoctorIdAsync(int doctorId)
         {
             return await context.Appointments
-                .Where(appointment => appointment.DoctorId == doctorId)
+                .Include(a => a.Doctor)     // Include Doctor data
+                .Include(a => a.Patient)    // Include Patient data
+                .Where(a => a.DoctorId == doctorId)
                 .ToListAsync();
         }
 

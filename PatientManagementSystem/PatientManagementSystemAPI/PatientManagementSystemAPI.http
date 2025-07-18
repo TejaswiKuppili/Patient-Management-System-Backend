@@ -8,3 +8,45 @@ Content-Type: application/json
 }
 
 ###
+
+@id=6
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/appointment/{{id}}
+
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/appointment/{{id}}
+Content-Type: application/json
+
+{
+  //Appointment
+}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  Dummy2
+}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"pradeep@c9.com",
+  "password":"Pradeep12"
+}
+
+###
+
+@doctorId=1
+GET {{PatientManagementSystemAPI_HostAddress}}/api/appointment/doctor/{{doctorId}}
+
+###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/appointment/doctor/{{doctorId}}
+
+###
