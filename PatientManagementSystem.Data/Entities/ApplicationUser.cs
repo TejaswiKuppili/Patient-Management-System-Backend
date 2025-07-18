@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatientManagementSystem.Data.Entities
 {
     /// <summary>
     /// Represents a system user for login and authentication.
     /// </summary>
-    public class    ApplicationUser
+    public class ApplicationUser
     {
         [Key]
         public int Id { get; set; } // UNIQUEIDENTIFIER
@@ -32,6 +33,11 @@ namespace PatientManagementSystem.Data.Entities
         public ICollection<RefreshToken> RefreshTokens { get; set; }
 
         public ICollection<Patient> PatientsCreated { get; set; } = new List<Patient>();
+
+        public int? SpecialtyId { get; set; } // Nullable FK to Specialty (nullable if not all users have it)
+
+        [ForeignKey(nameof(SpecialtyId))]
+        public Specialty? Specialty { get; set; }
 
     }
 }

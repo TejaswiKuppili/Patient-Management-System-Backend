@@ -115,5 +115,20 @@
         /// Message  indicating that fetching vital details successfully.
         /// </summary>
         public const string VitalFetchedSuccessMessage = "Vitals fetched successfully";
+
+
+
+        // Appointment Messages
+        public const string AppointmentsFetchedMessage = "Appointments retrieved successfully.";
+        public const string AppointmentsFetchFailedMessage = "Failed to retrieve appointments.";
+
+        public const string AppointmentAddedMessage = "Appointment added successfully.";
+        public const string AppointmentAddFailedMessage = "Failed to add appointment.";
+
+        public const string AppointmentUpdatedMessage = "Appointment updated successfully.";
+        public const string AppointmentUpdateFailedMessage = "Failed to update appointment.";
+
+        public const string AppointmentDeletedMessage = "Appointment deleted successfully.";
+        public const string AppointmentDeleteFailedMessage = "Failed to delete appointment.";
     }
 }

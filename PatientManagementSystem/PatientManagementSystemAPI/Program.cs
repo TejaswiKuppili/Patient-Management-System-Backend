@@ -5,7 +5,8 @@ using PatientManagementSystem.Data.DataContext;
 using PatientManagementSystem.Data.Repositories;
 using PatientManagementSystem.Repository; 
 using PatientManagementSystem.Repository.Interfaces; 
-using PatientManagementSystem.Services; 
+using PatientManagementSystem.Services;
+using PatientManagementSystem.Common.Services;
 using PatientManagementSystem.Services.Interfaces; 
 using Microsoft.AspNetCore.Authentication.JwtBearer; 
 using Microsoft.IdentityModel.Tokens; 
@@ -45,7 +46,8 @@ namespace PatientManagementSystemAPI
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IPatientService, PatientService>();
             builder.Services.AddScoped<IVitalService, VitalService>();
-
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+            builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             builder.Services.AddControllers();
     
             builder.Services.AddHttpContextAccessor(); 

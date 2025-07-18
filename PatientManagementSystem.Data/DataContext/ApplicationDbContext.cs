@@ -59,6 +59,16 @@ namespace PatientManagementSystem.Data.DataContext
         /// </summary>
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
+
+        public DbSet<Specialty> Specialties { get; set; }
+
+        /// <summary>
+        /// Provides a filtered query for users who are doctors.
+        /// </summary>
+        public IQueryable<ApplicationUser> Doctors =>
+            ApplicationUsers.Where(u => u.RoleId == 2);
+
+
         /// <summary>
         /// Configures the model and defines the schema for the database.
         /// </summary>
@@ -87,12 +97,18 @@ namespace PatientManagementSystem.Data.DataContext
                 entity.HasIndex(u => u.Email).IsUnique();
                 entity.Property(u => u.Email).IsRequired().HasMaxLength(256);
                 entity.Property(u => u.PasswordHash).IsRequired();
+                //entity.Property(u => u.RoleId).IsRequired();
                 entity.Property(u => u.CreatedAt).HasDefaultValueSql("GETDATE()");
                 entity.HasOne(u => u.Role)
                       .WithMany(r => r.ApplicationUsers)
                       .HasForeignKey(u => u.RoleId)
                       .OnDelete(DeleteBehavior.NoAction)
                       .IsRequired();
+                entity.HasOne(u => u.Specialty)
+                            .WithMany()
+                            .HasForeignKey(u => u.SpecialtyId)
+                            .OnDelete(DeleteBehavior.SetNull); 
+
             });
 
             // Employees
@@ -121,26 +137,38 @@ namespace PatientManagementSystem.Data.DataContext
                 entity.Property(p => p.CreatedAt).HasDefaultValueSql("GETDATE()");
                 entity.Property(p => p.ReasonForVisit).IsRequired();
 
-                
-        entity.HasOne(p => p.CreatedByEmployee)
-            .WithMany(u => u.PatientsCreated)
-          .HasForeignKey(p => p.CreatedBy)
-          .OnDelete(DeleteBehavior.NoAction)
-          .IsRequired();
-    });
+
+                entity.HasOne(p => p.CreatedByEmployee)
+                    .WithMany(u => u.PatientsCreated)
+                  .HasForeignKey(p => p.CreatedBy)
+                  .OnDelete(DeleteBehavior.NoAction)
+                  .IsRequired();
+            });
 
             // Appointments
             modelBuilder.Entity<Appointment>(entity =>
             {
-                entity.HasKey(a => a.Id);
-                entity.Property(a => a.AppointmentDateTime).IsRequired();
-                entity.Property(a => a.Reason).HasMaxLength(300);
-                entity.Property(a => a.CreatedAt).HasDefaultValueSql("GETDATE()");
-                entity.HasOne(a => a.Patient)
-                      .WithMany(p => p.Appointments)
-                      .HasForeignKey(a => a.PatientId)
-                      .OnDelete(DeleteBehavior.NoAction)
-                      .IsRequired();
+                
+                    entity.HasKey(e => e.Id);
+
+                    entity.HasOne(e => e.Patient)
+                          .WithMany(p => p.Appointments)
+                          .HasForeignKey(e => e.PatientId)
+                          .OnDelete(DeleteBehavior.NoAction);
+
+                    entity.HasOne(e => e.CreatedByUser)
+                          .WithMany()
+                          .HasForeignKey(e => e.CreatedBy)
+                          .OnDelete(DeleteBehavior.NoAction);
+
+
+                    entity.HasOne(e => e.Doctor)
+                          .WithMany()
+                          .HasForeignKey(e => e.DoctorId)
+                          .OnDelete(DeleteBehavior.NoAction);
+
+                    entity.Property(u => u.CreatedAt).HasDefaultValueSql("GETDATE()");
+
             });
 
             // MedicalRecords
@@ -172,7 +200,7 @@ namespace PatientManagementSystem.Data.DataContext
             .WithMany()
           .HasForeignKey(p => p.CreatedBy)
           .OnDelete(DeleteBehavior.NoAction)
-          .IsRequired(); 
+          .IsRequired();
             });
 
 
@@ -206,6 +234,9 @@ namespace PatientManagementSystem.Data.DataContext
             modelBuilder.Entity<MedicalRecord>()
                 .Property(mr => mr.RecordType);
             //     .HasConversion<string>();
+
+
+
         }
     }
 }
