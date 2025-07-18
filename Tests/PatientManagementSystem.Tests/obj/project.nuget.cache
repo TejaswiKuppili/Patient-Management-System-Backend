@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "loYXNRGk068=",
+  "dgSpecHash": "BKgeAtzCCtg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\Tests\\PatientManagementSystem.Tests\\PatientManagementSystem.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\Tests\\PatientManagementSystem.Tests\\PatientManagementSystem.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

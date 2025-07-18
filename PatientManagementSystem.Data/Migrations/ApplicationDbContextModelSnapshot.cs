@@ -17,7 +17,7 @@ namespace PatientManagementSystem.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.5")
+                .HasAnnotation("ProductVersion", "9.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -47,6 +47,9 @@ namespace PatientManagementSystem.Data.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("SpecialtyId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -58,6 +61,8 @@ namespace PatientManagementSystem.Data.Migrations
                         .IsUnique();
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("SpecialtyId");
 
                     b.HasIndex("Username")
                         .IsUnique();
@@ -73,7 +78,10 @@ namespace PatientManagementSystem.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("AppointmentDateTime")
+                    b.Property<DateTime>("AppointmentEndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("AppointmentStartTime")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreatedAt")
@@ -82,6 +90,9 @@ namespace PatientManagementSystem.Data.Migrations
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
                     b.Property<int>("PatientId")
@@ -101,6 +112,8 @@ namespace PatientManagementSystem.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedBy");
+
+                    b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
 
@@ -327,6 +340,23 @@ namespace PatientManagementSystem.Data.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("PatientManagementSystem.Data.Entities.Specialty", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Specialties");
+                });
+
             modelBuilder.Entity("PatientManagementSystem.Data.Entities.Vital", b =>
                 {
                     b.Property<int>("Id")
@@ -376,7 +406,14 @@ namespace PatientManagementSystem.Data.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("PatientManagementSystem.Data.Entities.Specialty", "Specialty")
+                        .WithMany()
+                        .HasForeignKey("SpecialtyId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("Role");
+
+                    b.Navigation("Specialty");
                 });
 
             modelBuilder.Entity("PatientManagementSystem.Data.Entities.Appointment", b =>
@@ -384,7 +421,13 @@ namespace PatientManagementSystem.Data.Migrations
                     b.HasOne("PatientManagementSystem.Data.Entities.ApplicationUser", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedBy")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("PatientManagementSystem.Data.Entities.ApplicationUser", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("PatientManagementSystem.Data.Entities.Patient", "Patient")
@@ -394,6 +437,8 @@ namespace PatientManagementSystem.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("CreatedByUser");
+
+                    b.Navigation("Doctor");
 
                     b.Navigation("Patient");
                 });

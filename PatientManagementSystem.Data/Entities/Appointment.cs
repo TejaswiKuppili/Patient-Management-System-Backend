@@ -1,6 +1,6 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace PatientManagementSystem.Data.Entities
 {
     /// <summary>
@@ -9,33 +9,39 @@ namespace PatientManagementSystem.Data.Entities
     public class Appointment
     {
         [Key]
-        public int Id { get; set; } // UNIQUEIDENTIFIER, PRIMARY KEY
+        public int Id { get; set; } // PRIMARY KEY
 
         [Required]
-        public int PatientId { get; set; } // FOREIGN KEY REFERENCES Patients(Id)
+        public int PatientId { get; set; } // FK to Patients
 
         [ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; } = null!; // Navigation to Patient
 
         [Required]
-        public DateTime AppointmentDateTime { get; set; } // DATETIME, NOT NULL
+        public DateTime AppointmentStartTime { get; set; }
+
+        [Required]
+        public DateTime AppointmentEndTime { get; set; }
 
         [MaxLength(300)]
-        public string? Reason { get; set; } // NVARCHAR(300), NULLABLE
+        public string? Reason { get; set; }
 
         [MaxLength(50)]
-        public string Status { get; set; } 
+        public string Status { get; set; } = "Scheduled";
 
         [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.Now; // DATETIME, DEFAULT GETDATE()
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         [Required]
-        //
-
-        public int CreatedBy { get; set; } // FK -> ApplicationUsers.Id
+        public int CreatedBy { get; set; } // FK to ApplicationUsers.Id
 
         [ForeignKey(nameof(CreatedBy))]
-        public ApplicationUser CreatedByUser { get; set; } // Navigation to ApplicationUser
-        
+        public ApplicationUser CreatedByUser { get; set; } = null!; // Navigation to creator (doctor/admin)
+
+        [Required]
+        public int DoctorId { get;set; }
+
+        [ForeignKey(nameof(DoctorId))]
+        public ApplicationUser Doctor { get; set; } = null!; // Navigation to the doctor handling the appointment
     }
 }

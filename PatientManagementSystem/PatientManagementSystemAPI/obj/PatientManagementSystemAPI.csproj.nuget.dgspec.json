@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {}
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
         "projectName": "PatientManagementSystem.Common",
-        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
+        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj",
         "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\obj\\",
+        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
         "projectName": "PatientManagementSystem.Data",
-        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
+        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj",
         "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\obj\\",
+        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
         "projectName": "PatientManagementSystem.Repository",
-        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
+        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj",
         "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\obj\\",
+        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -198,11 +198,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
               },
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
               }
             }
           }
@@ -248,14 +248,14 @@
         }
       }
     },
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
         "projectName": "PatientManagementSystem.Services",
-        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
+        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj",
         "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\obj\\",
+        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -276,11 +276,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
               },
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
               }
             }
           }
@@ -326,14 +326,14 @@
         }
       }
     },
-    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {
+    "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
         "projectName": "PatientManagementSystemAPI",
-        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
+        "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystemAPI\\PatientManagementSystemAPI.csproj",
         "packagesPath": "C:\\Users\\Pranitha Alluri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
+        "outputPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystemAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -354,17 +354,17 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Common\\PatientManagementSystem.Common.csproj"
               },
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem.Data\\PatientManagementSystem.Data.csproj"
               },
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Repository\\PatientManagementSystem.Repository.csproj"
               },
-              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
-                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS-api\\Patient-Management-System-Backend\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
+              "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj": {
+                "projectPath": "C:\\Users\\Pranitha Alluri\\OneDrive - COGNINE\\Desktop\\PMS_POC\\PatientManagementSystem\\PatientManagementSystem.Services\\PatientManagementSystem.Services.csproj"
               }
             }
           }
@@ -387,7 +387,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -395,23 +395,23 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.7, )"
             }
           },
           "imports": [
