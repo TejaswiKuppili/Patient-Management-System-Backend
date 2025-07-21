@@ -80,7 +80,7 @@ namespace PatientManagementSystem.Controllers
         /// </summary>
         /// <param name="id">Appointment ID to delete.</param>
         /// <returns>Status and message of the operation.</returns>
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteAppointment(int id)
         {
             ApiResponse<string>? response = await AppointmentService.DeleteAppointmentAsync(id);

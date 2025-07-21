@@ -85,11 +85,11 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Delete user by ID.
         /// </summary>
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteUser(int userId)
         
         {
-            ApiResponse<UserIdResponseDto?> response = await userService.DeleteUserAsync(userId);
+            ApiResponse<UserIdResponseDto> response = await userService.DeleteUserAsync(userId);
             if (!response.Success)
                 return NotFound(response);
 
