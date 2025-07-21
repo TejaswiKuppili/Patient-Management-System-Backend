@@ -50,6 +50,9 @@ namespace PatientManagementSystemAPI
             builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             builder.Services.AddScoped<IDoctorService, DoctorService>();
             builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+
+            builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+            builder.Services.AddScoped<IProfileService, ProfileService>();
             builder.Services.AddControllers();
     
             builder.Services.AddHttpContextAccessor(); 

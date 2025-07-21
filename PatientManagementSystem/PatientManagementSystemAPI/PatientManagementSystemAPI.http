@@ -75,3 +75,89 @@ DELETE {{PatientManagementSystemAPI_HostAddress}}/api/Users
 DELETE {{PatientManagementSystemAPI_HostAddress}}/api/users/{id}?userId={{userId}}
 
 ###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/{{userId}}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/profile
+Content-Type: application/json
+
+{
+  "applicationUserId": 1,
+ 
+  "dateOfBirth": "1990-01-01T00:00:00",
+  "gender": "Male",
+  "phoneNumber": "1234567890",
+  "bio": "Passionate about health and wellness.",
+  "address": "123 Main Street, Suite 200",
+  "city": "Hyderabad",
+  "cityState": "Telangana",
+  "country": "India",
+  "firstName":"Aditya Malluvalasa",
+  "email":"adithya@c9.com"
+}
+
+###
+@userId=1
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/{{userId}}
+
+###
+@id=1
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/patient/Update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "applicationUserId": 1,
+
+  "dateOfBirth": "1998-01-01T00:00:00",
+
+  "firstName": "Aditya Malluvalasa",
+  "email": "adithya@c9.com"
+}
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/patient/{{id}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "applicationUserId": 1,
+
+  "dateOfBirth": "1998-01-01T00:00:00",
+
+  "firstName": "Aditya Malluvalasa",
+  "email": "adithya@c9.com"
+}
+
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/Update
+Content-Type: application/json
+
+{
+  //ProfileDto
+}
+
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/update
+Content-Type: application/json
+
+
+{
+  "id": 1,
+  "applicationUserId": 1,
+
+  "dateOfBirth": "1998-01-01T00:00:00",
+
+  "firstName": "Aditya Malluvalasa",
+  "email": "adithya@c9.com"
+}
+
+###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/{{userId}}
+
+###

@@ -39,5 +39,8 @@ namespace PatientManagementSystem.Data.Entities
         [ForeignKey(nameof(SpecialtyId))]
         public Specialty? Specialty { get; set; }
 
+        public Profile? Profile { get; set; } 
+
+
     }
 }

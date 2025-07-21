@@ -59,8 +59,15 @@ namespace PatientManagementSystem.Data.DataContext
         /// </summary>
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
-
+        /// <summary>
+        /// Gets or sets the DbSet for Specialty entities of doctors.
+        /// </summary>
         public DbSet<Specialty> Specialties { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the DbSet for Profile entities.
+        /// </summary>
+        public DbSet<Profile> Profiles { get; set; }
 
         /// <summary>
         /// Provides a filtered query for users who are doctors.
@@ -217,6 +224,21 @@ namespace PatientManagementSystem.Data.DataContext
                       .HasForeignKey(rt => rt.UserId)
                       .OnDelete(DeleteBehavior.Cascade)
                       .IsRequired();
+            });
+            modelBuilder.Entity<Profile>(entity =>
+            {
+                entity.HasKey(p => p.Id);
+
+                entity.HasOne(p => p.ApplicationUser)
+                      .WithOne(u => u.Profile)
+                      .HasForeignKey<Profile>(p => p.ApplicationUserId)
+                      .OnDelete(DeleteBehavior.Cascade); 
+
+                entity.Property(p => p.Gender).HasMaxLength(10);
+                entity.Property(p => p.PhoneNumber).HasMaxLength(20);
+                entity.Property(p => p.Bio).HasMaxLength(500);
+                entity.Property(p => p.Address).HasMaxLength(300);
+
             });
 
             // Enum conversions
