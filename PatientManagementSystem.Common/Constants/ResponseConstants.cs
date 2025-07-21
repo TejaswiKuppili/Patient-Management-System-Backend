@@ -116,19 +116,44 @@
         /// </summary>
         public const string VitalFetchedSuccessMessage = "Vitals fetched successfully";
 
-
-
-        // Appointment Messages
+        /// <summary>
+        /// Message indicating that fetched appointment details successfully.
+        /// </summary>
         public const string AppointmentsFetchedMessage = "Appointments retrieved successfully.";
+
+        /// <summary>
+        /// Message indicating that fetching appointment details failed.
+        /// </summary>
         public const string AppointmentsFetchFailedMessage = "Failed to retrieve appointments.";
 
+        /// <summary>
+        /// Message indicating that an appointment was added successfully.
+        /// </summary>
         public const string AppointmentAddedMessage = "Appointment added successfully.";
+
+        /// <summary>
+        /// Message indicating that adding an appointment failed.
+        /// </summary>
         public const string AppointmentAddFailedMessage = "Failed to add appointment.";
 
+        /// <summary>
+        /// Message indicating that an appointment was updated successfully.
+        /// </summary>
         public const string AppointmentUpdatedMessage = "Appointment updated successfully.";
+
+        /// <summary>
+        /// Message indicating that updating an appointment failed.
+        /// </summary>
         public const string AppointmentUpdateFailedMessage = "Failed to update appointment.";
 
+        /// <summary>
+        /// Message indicating that an appointment was deleted successfully.
+        /// </summary>
         public const string AppointmentDeletedMessage = "Appointment deleted successfully.";
+
+        /// <summary>
+        /// Message indicating that deleting an appointment failed.
+        /// </summary>
         public const string AppointmentDeleteFailedMessage = "Failed to delete appointment.";
     }
 }

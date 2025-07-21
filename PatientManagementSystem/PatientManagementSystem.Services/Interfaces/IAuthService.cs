@@ -3,7 +3,7 @@
 namespace PatientManagementSystem.Services.Interfaces
 {
     /// <summary>
-    /// Contract for authentication services.
+    /// Service interface  for authentication services.
     /// </summary>
     public interface IAuthService
     {

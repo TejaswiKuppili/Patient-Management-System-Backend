@@ -31,14 +31,14 @@ namespace PatientManagementSystemAPI.Controllers
                     return BadRequest(response);
                 return Ok(response);    
         }
-
+        
         /// <summary>
         /// Creates a new user.
         /// </summary>
         /// <param name="userDetails"></param>
         /// <returns></returns>
         [HttpPost("create")]
-        public async Task<IActionResult> CreateUserAsync([FromBody] UserDto userDetails)
+        public async Task<IActionResult> LoginUser([FromBody] UserDto userDetails)
         {
             if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))
             {
@@ -77,6 +77,19 @@ namespace PatientManagementSystemAPI.Controllers
         public async Task<IActionResult> GetUserById(int userId)
         {
             ApiResponse<UserIdResponseDto>? response = await userService.GetUserByIdAsync(userId);
+            if (!response.Success)
+                return NotFound(response);
+
+            return Ok(response);
+        }
+        /// <summary>
+        /// Delete user by ID.
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int userId)
+        
+        {
+            ApiResponse<UserIdResponseDto?> response = await userService.DeleteUserAsync(userId);
             if (!response.Success)
                 return NotFound(response);
 

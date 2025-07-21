@@ -141,6 +141,26 @@ namespace PatientManagementSystem.Repository
                 .Include(u => u.Role)
                 .FirstOrDefaultAsync(u => u.Id == userId);
         }
+        /// <summary>
+        /// Deletes a user by their ID.
+        /// </summary>
+        /// <param name="userId">ID of the user to delete</param>
+        /// <returns>True if deleted, false otherwise</returns>
+        /// <exception cref="Exception">If user not found</exception>
+        public async Task<bool> DeleteUserAsync(int userId)
+        {
+            ApplicationUser? user = await context.ApplicationUsers.FindAsync(userId);
+
+            if (user == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            context.ApplicationUsers.Remove(user);
+            await context.SaveChangesAsync();
+
+            return true;
+        }
 
     }
 }

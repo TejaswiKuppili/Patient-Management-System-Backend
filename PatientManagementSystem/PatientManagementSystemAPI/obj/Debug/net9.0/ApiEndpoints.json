@@ -16,7 +16,7 @@
     ]
   },
   {
-    "ContainingType": "AppointmentController",
+    "ContainingType": "PatientManagementSystem.Controllers.AppointmentController",
     "Method": "CreateAppointment",
     "RelativePath": "api/Appointment",
     "HttpMethod": "POST",
@@ -32,7 +32,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AppointmentController",
+    "ContainingType": "PatientManagementSystem.Controllers.AppointmentController",
     "Method": "UpdateAppointment",
     "RelativePath": "api/Appointment/{id}",
     "HttpMethod": "PUT",
@@ -53,7 +53,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AppointmentController",
+    "ContainingType": "PatientManagementSystem.Controllers.AppointmentController",
     "Method": "DeleteAppointment",
     "RelativePath": "api/Appointment/{id}",
     "HttpMethod": "DELETE",
@@ -69,7 +69,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AppointmentController",
+    "ContainingType": "PatientManagementSystem.Controllers.AppointmentController",
     "Method": "GetAppointmentsByDoctorId",
     "RelativePath": "api/Appointment/doctor/{doctorId}",
     "HttpMethod": "GET",
@@ -85,7 +85,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AppointmentController",
+    "ContainingType": "PatientManagementSystem.Controllers.AppointmentController",
     "Method": "GetAppointmentsWithDoctorName",
     "RelativePath": "api/Appointment/with-doctor",
     "HttpMethod": "GET",
@@ -247,6 +247,27 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
     "Method": "GetUserById",
     "RelativePath": "api/Users/{userId}",
     "HttpMethod": "GET",
@@ -263,7 +284,7 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
-    "Method": "CreateUserAsync",
+    "Method": "LoginUser",
     "RelativePath": "api/Users/create",
     "HttpMethod": "POST",
     "IsController": true,

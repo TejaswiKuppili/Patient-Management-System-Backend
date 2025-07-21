@@ -2,6 +2,9 @@
 
 namespace PatientManagementSystem.Services.Interfaces
 {
+    /// <summary>
+    /// Service interface for managing doctor-related operations.
+    /// </summary>
     public interface IDoctorService
     {
         Task<IEnumerable<DoctorDto>> GetDoctorsAsync();

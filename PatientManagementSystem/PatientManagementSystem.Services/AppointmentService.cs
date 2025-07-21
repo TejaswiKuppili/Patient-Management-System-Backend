@@ -18,7 +18,11 @@ namespace PatientManagementSystem.Common.Services
         {
             AppointmentRepository = appointmentRepository;
         }
-
+        /// <summary>
+        /// Retrieves appointments for a specific doctor by their ID.
+        /// </summary>
+        /// <param name="doctorId"></param>
+        /// <returns></returns>
         public async Task<ApiResponse<IEnumerable<AppointmentDto>>> GetAppointmentsByDoctorIdAsync(int doctorId)
         {
             try
@@ -35,7 +39,8 @@ namespace PatientManagementSystem.Common.Services
                     DoctorName = appointment.Doctor.Username,
                     DoctorId=appointment.Doctor.Id,
                     CreatedBy=appointment.CreatedBy,
-                    Reason=appointment.Reason
+                    Reason=appointment.Reason,
+                    CreatedAt = appointment.CreatedAt
                 });
 
                 return ApiResponseHelper.Success(result, ResponseConstants.AppointmentsFetchedMessage);
@@ -47,7 +52,10 @@ namespace PatientManagementSystem.Common.Services
                     ResponseConstants.InternalServerError);
             }
         }
-
+        /// <summary>
+        /// Retrieves all appointments along with the doctor's name.
+        /// </summary>
+        /// <returns></returns>
         public async Task<ApiResponse<IEnumerable<AppointmentDto>>> GetAppointmentsWithDoctorNameAsync()
         {
             try
@@ -76,7 +84,11 @@ namespace PatientManagementSystem.Common.Services
                     ResponseConstants.InternalServerError);
             }
         }
-
+        /// <summary>
+        /// Creates a new appointment based on the provided details.
+        /// </summary>
+        /// <param name="appointment"></param>
+        /// <returns></returns>
         public async Task<ApiResponse<string>> CreateAppointmentAsync(AppointmentDto appointment)
         {
             try
@@ -104,7 +116,11 @@ namespace PatientManagementSystem.Common.Services
                     ResponseConstants.InternalServerError);
             }
         }
-
+        /// <summary>
+        /// Updates an existing appointment with the provided details.
+        /// </summary>
+        /// <param name="appointment"></param>
+        /// <returns></returns>
         public async Task<ApiResponse<string>> UpdateAppointmentAsync(AppointmentDto appointment)
         {
             try
@@ -132,7 +148,11 @@ namespace PatientManagementSystem.Common.Services
                     ResponseConstants.InternalServerError);
             }
         }
-
+        /// <summary>
+        /// Deletes an appointment by its ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ApiResponse<string>> DeleteAppointmentAsync(int id)
         {
             try

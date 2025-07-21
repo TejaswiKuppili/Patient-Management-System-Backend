@@ -15,6 +15,7 @@ namespace PatientManagementSystem.Services.Interfaces
         Task<UserDto> ValidateUserAsync(string email, string password);
 
         Task<ApiResponse<UserIdResponseDto>> GetUserByIdAsync(int userId);
+        Task<ApiResponse<UserIdResponseDto>> DeleteUserAsync(int userId);
 
     }
 }

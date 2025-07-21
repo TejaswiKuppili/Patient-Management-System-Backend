@@ -170,6 +170,47 @@ namespace PatientManagementSystem.Services
             }
         }
 
+        /// <summary>
+        /// Deletes a user by their ID.
+        /// </summary>
+        /// <param name="userId">The ID of the user to delete.</param>
+        /// <returns>ApiResponse indicating success or failure.</returns>
+        public async Task<ApiResponse<UserIdResponseDto>> DeleteUserAsync(int userId)
+        {
+            try
+            {
+                // Check if the user exists
+                ApplicationUser? user = await userRepository.GetUserDetailsAsync(userId);
+                if (user == null)
+                {
+                    return ApiResponseHelper.Fail<UserIdResponseDto>(
+                        "User not found.",
+                        ResponseConstants.NotFound
+                    );
+                }
+
+                // Delete the user
+                await userRepository.DeleteUserAsync(userId);
+
+                UserIdResponseDto dto = new UserIdResponseDto
+                {
+                    Id = user.Id,
+                    Name = user.Username,
+                    Email = user.Email,
+                    RoleName = user.Role?.Name
+                };
+
+                return ApiResponseHelper.Success(dto, "User deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error deleting user with ID {userId}", userId);
+                return ApiResponseHelper.Fail<UserIdResponseDto>(
+                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    ResponseConstants.InternalServerError
+                );
+            }
+        }
 
 
 

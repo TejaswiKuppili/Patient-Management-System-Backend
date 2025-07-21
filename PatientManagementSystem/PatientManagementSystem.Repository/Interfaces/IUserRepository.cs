@@ -12,7 +12,8 @@ namespace PatientManagementSystem.Repository.Interfaces
         Task<UserAndRoleDto> GetUsersAndRolesAsync();
         Task<UserDto> CreateUserAsync(UserDto newUser);
         Task<ApplicationUser?> GetUserDetailsAsync(int userId);
-        Task UpdateUserRoleAsync(int userId, string newRoleName); 
+        Task UpdateUserRoleAsync(int userId, string newRoleName);
+        Task<bool> DeleteUserAsync(int userId);
 
     }
 

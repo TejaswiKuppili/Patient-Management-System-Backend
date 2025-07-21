@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PatientManagementSystem.Common.DTOs
 {
+    /// <summary>
+    ///  Data Transfer Object (DTO) for doctor information.
+    /// </summary>
     public class DoctorDto
     {
         public int Id { get; set; }

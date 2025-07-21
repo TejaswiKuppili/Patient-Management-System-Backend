@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ###
 
-@id=6
+@id=13
 DELETE {{PatientManagementSystemAPI_HostAddress}}/api/appointment/{{id}}
 
 ###
@@ -48,5 +48,30 @@ GET {{PatientManagementSystemAPI_HostAddress}}/api/appointment/doctor/{{doctorId
 ###
 
 GET {{PatientManagementSystemAPI_HostAddress}}/api/appointment/doctor/{{doctorId}}
+
+###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/patient/getAllPatients
+
+###
+
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/appointment/{{id}}
+
+###
+
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/Users/{{id}}
+
+###
+
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/Users
+
+###
+
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/Users
+
+###
+
+@userId=13
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/users/{id}?userId={{userId}}
 
 ###
