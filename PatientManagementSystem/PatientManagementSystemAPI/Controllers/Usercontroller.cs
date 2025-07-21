@@ -85,7 +85,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Delete user by ID.
         /// </summary>
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("delete/{userId}")]
         public async Task<IActionResult> DeleteUser(int userId)
         
         {
