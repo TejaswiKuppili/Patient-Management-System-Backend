@@ -58,7 +58,7 @@ namespace PatientManagementSystem.Repository
         public async Task<UserDto> CreateUserAsync(UserDto newUser)
         {
             Role? role = await context.Roles
-        .FirstOrDefaultAsync(r => r.Name == newUser.RoleName) ?? throw new Exception("Role not found.");
+        .FirstOrDefaultAsync(r => r.Name == newUser.RoleName) ?? null;
             
             
             ApplicationUser? user = new ApplicationUser

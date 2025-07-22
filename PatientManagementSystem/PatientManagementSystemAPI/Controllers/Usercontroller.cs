@@ -40,7 +40,7 @@ namespace PatientManagementSystemAPI.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> RegisterUser([FromBody] UserDto userDetails)
         {
-            if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))
+            if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email))
             {
                 return BadRequest(ResponseConstants.MissingUserDetails);
             }
