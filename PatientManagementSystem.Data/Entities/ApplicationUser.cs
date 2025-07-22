@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace PatientManagementSystem.Data.Entities
 {
@@ -22,9 +23,8 @@ namespace PatientManagementSystem.Data.Entities
         [Required]
         public string PasswordHash { get; set; } = null!; // NVARCHAR(MAX)
 
-        [Required]
-       
-        public int RoleId { get; set; } // FK to Roles(Id), NVARCHAR(50)
+        [AllowNull()]
+        public int? RoleId { get; set; } // FK to Roles(Id), NVARCHAR(50)
 
         public DateTime CreatedAt { get; set; } = DateTime.Now; // DEFAULT GETDATE()
 

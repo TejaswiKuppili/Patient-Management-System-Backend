@@ -111,7 +111,7 @@ Content-Type: application/json
   "id": 1,
   "applicationUserId": 1,
 
-  "dateOfBirth": "1998-01-01T00:00:00",
+  "dateOfBirth": "2000-01-01T00:00:00",
 
   "firstName": "Aditya Malluvalasa",
   "email": "adithya@c9.com"
@@ -150,7 +150,7 @@ Content-Type: application/json
   "id": 1,
   "applicationUserId": 1,
 
-  "dateOfBirth": "1998-01-01T00:00:00",
+  "dateOfBirth": "2000-01-01T00:00:00",
 
   "firstName": "Aditya Malluvalasa",
   "email": "adithya@c9.com"

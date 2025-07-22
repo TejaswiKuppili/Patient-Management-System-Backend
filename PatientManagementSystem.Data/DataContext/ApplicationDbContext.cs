@@ -110,7 +110,7 @@ namespace PatientManagementSystem.Data.DataContext
                       .WithMany(r => r.ApplicationUsers)
                       .HasForeignKey(u => u.RoleId)
                       .OnDelete(DeleteBehavior.NoAction)
-                      .IsRequired();
+                      ;
                 entity.HasOne(u => u.Specialty)
                             .WithMany()
                             .HasForeignKey(u => u.SpecialtyId)
