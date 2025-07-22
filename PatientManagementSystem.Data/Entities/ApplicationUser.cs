@@ -29,7 +29,7 @@ namespace PatientManagementSystem.Data.Entities
         public DateTime CreatedAt { get; set; } = DateTime.Now; // DEFAULT GETDATE()
 
         // Navigation Property
-        public Role Role { get; set; } = null!;
+        public Role? Role { get; set; } = null;
         public ICollection<RefreshToken> RefreshTokens { get; set; }
 
         public ICollection<Patient> PatientsCreated { get; set; } = new List<Patient>();

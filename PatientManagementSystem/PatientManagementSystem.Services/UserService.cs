@@ -60,7 +60,6 @@ namespace PatientManagementSystem.Services
             {
                 userDetails.Password = PasswordHasher.HashPassword(userDetails.Password);
 
-
                 await userRepository.CreateUserAsync(userDetails);
                 return ApiResponseHelper.Success<string?>(null,ResponseConstants.CreatedUserMessage);
             }

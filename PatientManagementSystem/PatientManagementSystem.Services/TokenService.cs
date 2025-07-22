@@ -53,15 +53,21 @@ namespace PatientManagementSystem.Services
                 byte[] key = Encoding.UTF8.GetBytes(configuration["Jwt:Key"]);
                 var tokenHandler = new JwtSecurityTokenHandler();
 
+                 List<Claim>? claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.Email, user.Email)
+                };
+
+                if (!string.IsNullOrWhiteSpace(user.RoleName))
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, user.RoleName));
+                }
+
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new[]
-                    {
-                        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                        new Claim(ClaimTypes.Name, user.Name),
-                        new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.Role, user.RoleName)
-                    }),
+                    Subject = new ClaimsIdentity(claims),
                     Expires = DateTime.UtcNow.AddMinutes(double.Parse(configuration["Jwt:AccessTokenExpiryMinutes"])),
                     SigningCredentials = new SigningCredentials(
                         new SymmetricSecurityKey(key),
@@ -75,8 +81,8 @@ namespace PatientManagementSystem.Services
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error generating access token for user {UserId}", user.Id);
-                throw;
+                // Log the exception or handle it as needed
+                throw new Exception("An error occurred while generating the JWT.", ex);
             }
         }
         /// <summary>
