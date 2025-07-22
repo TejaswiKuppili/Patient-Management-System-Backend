@@ -327,7 +327,7 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.UsersController",
-    "Method": "LoginUser",
+    "Method": "RegisterUser",
     "RelativePath": "api/Users/create",
     "HttpMethod": "POST",
     "IsController": true,

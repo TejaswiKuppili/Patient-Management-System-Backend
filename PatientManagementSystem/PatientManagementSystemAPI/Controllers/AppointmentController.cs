@@ -53,7 +53,7 @@ namespace PatientManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAppointment([FromBody] AppointmentDto appointment)
         {
-            ApiResponse<string>? response = await AppointmentService.CreateAppointmentAsync(appointment);
+            ApiResponse<string?> response = await AppointmentService.CreateAppointmentAsync(appointment);
             return StatusCode(response.StatusCode, response);
         }
 
@@ -71,7 +71,7 @@ namespace PatientManagementSystem.Controllers
                 return BadRequest("Appointment ID mismatch.");
             }
 
-            ApiResponse<string>? response = await AppointmentService.UpdateAppointmentAsync(updatedAppointment);
+            ApiResponse<string?> response = await AppointmentService.UpdateAppointmentAsync(updatedAppointment);
             return StatusCode(response.StatusCode, response);
         }
 
@@ -83,7 +83,7 @@ namespace PatientManagementSystem.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteAppointment(int id)
         {
-            ApiResponse<string>? response = await AppointmentService.DeleteAppointmentAsync(id);
+            ApiResponse<string?> response = await AppointmentService.DeleteAppointmentAsync(id);
             return StatusCode(response.StatusCode, response);
         }
     }

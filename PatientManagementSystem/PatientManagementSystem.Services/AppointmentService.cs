@@ -89,7 +89,7 @@ namespace PatientManagementSystem.Common.Services
         /// </summary>
         /// <param name="appointment"></param>
         /// <returns></returns>
-        public async Task<ApiResponse<string>> CreateAppointmentAsync(AppointmentDto appointment)
+        public async Task<ApiResponse<string?>> CreateAppointmentAsync(AppointmentDto appointment)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace PatientManagementSystem.Common.Services
 
                 await AppointmentRepository.AddAsync(entity);
 
-                return ApiResponseHelper.Success(ResponseConstants.AppointmentAddedMessage);
+                return ApiResponseHelper.Success<string?>(null,ResponseConstants.AppointmentAddedMessage);
             }
             catch (Exception ex)
             {
@@ -121,7 +121,7 @@ namespace PatientManagementSystem.Common.Services
         /// </summary>
         /// <param name="appointment"></param>
         /// <returns></returns>
-        public async Task<ApiResponse<string>> UpdateAppointmentAsync(AppointmentDto appointment)
+        public async Task<ApiResponse<string?>> UpdateAppointmentAsync(AppointmentDto appointment)
         {
             try
             {
@@ -139,7 +139,7 @@ namespace PatientManagementSystem.Common.Services
 
                 await AppointmentRepository.UpdateAsync(existing);
 
-                return ApiResponseHelper.Success(ResponseConstants.AppointmentUpdatedMessage);
+                return ApiResponseHelper.Success<string?>(null,ResponseConstants.AppointmentUpdatedMessage);
             }
             catch (Exception ex)
             {
@@ -153,7 +153,7 @@ namespace PatientManagementSystem.Common.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<ApiResponse<string>> DeleteAppointmentAsync(int id)
+        public async Task<ApiResponse<string?>> DeleteAppointmentAsync(int id)
         {
             try
             {
@@ -164,7 +164,7 @@ namespace PatientManagementSystem.Common.Services
                 }
 
                 await AppointmentRepository.DeleteAsync(appointment);
-                return ApiResponseHelper.Success(ResponseConstants.AppointmentDeletedMessage);
+                return ApiResponseHelper.Success<string?>(null,ResponseConstants.AppointmentDeletedMessage);
             }
             catch (Exception ex)
             {

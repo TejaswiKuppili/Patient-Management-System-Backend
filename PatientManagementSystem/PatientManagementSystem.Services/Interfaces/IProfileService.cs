@@ -5,9 +5,9 @@ namespace PatientManagementSystem.Services.Interfaces
 {
     public interface IProfileService
     {
-        Task<ProfileDto?> GetProfileByUserIdAsync(int userId);
-        Task CreateProfileAsync(ProfileDto profileDto);
-        Task<bool> UpdateProfileAsync( ProfileDto profileDto);
-        Task<bool> DeleteProfileAsync(int userId);
+        Task<ApiResponse<bool>> DeleteProfileAsync(int userId);
+        Task<ApiResponse<ProfileDto?>> UpdateProfileAsync(ProfileDto profileDto);
+        Task<ApiResponse<ProfileDto?>> CreateProfileAsync(ProfileDto profileDto);
+        Task<ApiResponse<ProfileDto?>> GetProfileByUserIdAsync(int userId);
     }
 }

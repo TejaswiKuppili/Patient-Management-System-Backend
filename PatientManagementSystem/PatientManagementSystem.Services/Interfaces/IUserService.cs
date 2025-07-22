@@ -10,8 +10,8 @@ namespace PatientManagementSystem.Services.Interfaces
         //Task<UserDto?> ValidateUserAsync(string email, string password);
 
         Task<ApiResponse<UserAndRoleDto>> GetUsersAndRolesAsync();
-        Task<ApiResponse<string>> CreateUserAsync(UserDto userDetails);
-        Task<ApiResponse<string>> UpdateUserRoleAsync(int userId, string newRoleName);
+        Task<ApiResponse<string?>> CreateUserAsync(UserDto userDetails);
+        Task<ApiResponse<string?>> UpdateUserRoleAsync(int userId, string newRoleName);
         Task<UserDto> ValidateUserAsync(string email, string password);
 
         Task<ApiResponse<UserIdResponseDto>> GetUserByIdAsync(int userId);

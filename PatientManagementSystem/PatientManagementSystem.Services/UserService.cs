@@ -54,7 +54,7 @@ namespace PatientManagementSystem.Services
         /// Creates a new user.
         /// </summary>
         /// <param name="userDetails"></param>
-        public async Task<ApiResponse<string>> CreateUserAsync(UserDto userDetails)
+        public async Task<ApiResponse<string?>> CreateUserAsync(UserDto userDetails)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace PatientManagementSystem.Services
 
 
                 await userRepository.CreateUserAsync(userDetails);
-                return ApiResponseHelper.Success(ResponseConstants.CreatedUserMessage);
+                return ApiResponseHelper.Success<string?>(null,ResponseConstants.CreatedUserMessage);
             }
 
             catch (Exception ex)
@@ -78,12 +78,12 @@ namespace PatientManagementSystem.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="newRoleName"></param>
-        public async Task<ApiResponse<string>> UpdateUserRoleAsync(int userId, string newRoleName)
+        public async Task<ApiResponse<string?>> UpdateUserRoleAsync(int userId, string newRoleName)
         {
             try
             {
                 await userRepository.UpdateUserRoleAsync(userId, newRoleName);
-                return ApiResponseHelper.Success(ResponseConstants.RoleUpdatedMessage);
+                return ApiResponseHelper.Success<string?>(null,ResponseConstants.RoleUpdatedMessage);
             }
             catch (Exception ex)
             {

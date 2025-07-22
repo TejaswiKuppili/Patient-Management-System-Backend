@@ -10,8 +10,8 @@ namespace PatientManagementSystem.Services.Interfaces
     {
         Task<ApiResponse<IEnumerable<AppointmentDto>>> GetAppointmentsByDoctorIdAsync(int doctorId);
         Task<ApiResponse<IEnumerable<AppointmentDto>>> GetAppointmentsWithDoctorNameAsync();
-        Task<ApiResponse<string>> CreateAppointmentAsync(AppointmentDto appointment);
-        Task<ApiResponse<string>> UpdateAppointmentAsync(AppointmentDto appointment);
-        Task<ApiResponse<string>> DeleteAppointmentAsync(int id);
+        Task<ApiResponse<string?>> CreateAppointmentAsync(AppointmentDto appointment);
+        Task<ApiResponse<string?>> UpdateAppointmentAsync(AppointmentDto appointment);
+        Task<ApiResponse<string?>> DeleteAppointmentAsync(int id);
     }
 }

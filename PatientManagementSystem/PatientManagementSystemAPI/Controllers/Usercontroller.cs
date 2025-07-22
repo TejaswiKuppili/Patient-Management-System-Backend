@@ -38,14 +38,14 @@ namespace PatientManagementSystemAPI.Controllers
         /// <param name="userDetails"></param>
         /// <returns></returns>
         [HttpPost("create")]
-        public async Task<IActionResult> LoginUser([FromBody] UserDto userDetails)
+        public async Task<IActionResult> RegisterUser([FromBody] UserDto userDetails)
         {
             if (string.IsNullOrEmpty(userDetails.Name) || string.IsNullOrEmpty(userDetails.Email) || string.IsNullOrEmpty(userDetails.RoleName))
             {
                 return BadRequest(ResponseConstants.MissingUserDetails);
             }
 
-            ApiResponse<string> response = await userService.CreateUserAsync(userDetails);
+            ApiResponse<string?> response = await userService.CreateUserAsync(userDetails);
             return Ok(response);
         }
 
@@ -64,7 +64,7 @@ namespace PatientManagementSystemAPI.Controllers
                 return BadRequest(ResponseConstants.InvalidRequestBody); 
             }
 
-            ApiResponse<string> response = await userService.UpdateUserRoleAsync(userId, request.Role);
+            ApiResponse<string?> response = await userService.UpdateUserRoleAsync(userId, request.Role);
             return Ok(response);
         }
 
