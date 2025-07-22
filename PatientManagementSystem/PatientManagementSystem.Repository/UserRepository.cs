@@ -55,7 +55,7 @@ namespace PatientManagementSystem.Repository
         /// <param name="newUser"></param>
 
         /// <exception cref="Exception"></exception>
-        public async Task<UserDto> CreateUserAsync(UserDto newUser)
+        public async Task CreateUserAsync(UserDto newUser)
         {
             Role? role = await context.Roles
         .FirstOrDefaultAsync(r => r.Name == newUser.RoleName) ?? null;
@@ -66,19 +66,11 @@ namespace PatientManagementSystem.Repository
                 Username = newUser.Name,
                 Email = newUser.Email,
                 PasswordHash = newUser.Password,
-                RoleId = role.RoleId
+                RoleId = role?.RoleId
             };
 
             context.ApplicationUsers.Add(user);
             await context.SaveChangesAsync();
-            // Return the created user as a DTO
-            return new UserDto
-            {
-                Id = user.Id,
-                Name = user.Username,
-                Email = user.Email,
-                RoleName = role.Name
-            };
         }
 
         /// <summary>

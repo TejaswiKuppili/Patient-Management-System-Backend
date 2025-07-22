@@ -10,7 +10,7 @@ namespace PatientManagementSystem.Repository.Interfaces
     {
         Task<UserDto?> GetUserByEmailAsync(string email);
         Task<UserAndRoleDto> GetUsersAndRolesAsync();
-        Task<UserDto> CreateUserAsync(UserDto newUser);
+        Task CreateUserAsync(UserDto newUser);
         Task<ApplicationUser?> GetUserDetailsAsync(int userId);
         Task UpdateUserRoleAsync(int userId, string newRoleName);
         Task<bool> DeleteUserAsync(int userId);
