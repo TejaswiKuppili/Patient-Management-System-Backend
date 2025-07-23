@@ -19,7 +19,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Get a user's profile by their userId
         /// </summary>
-        [HttpGet("{userId}")]
+        [HttpGet("me/{userId}")]
         public async Task<IActionResult> GetProfile(int userId)
         {
             var response = await profileService.GetProfileByUserIdAsync(userId);
@@ -29,7 +29,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Create a new profile
         /// </summary>
-        [HttpPost]
+        [HttpPost("me")]
         public async Task<IActionResult> CreateProfile([FromBody] ProfileDto profileDto)
         {
             if (!ModelState.IsValid)
@@ -42,7 +42,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Update an existing profile
         /// </summary>
-        [HttpPut]
+        [HttpPut("me")]
         public async Task<IActionResult> UpdateProfile([FromBody] ProfileDto profileDto)
         {
             if (!ModelState.IsValid)
@@ -55,7 +55,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Delete a profile by userId
         /// </summary>
-        [HttpDelete("{userId}")]
+        [HttpDelete("me/{userId}")]
         public async Task<IActionResult> DeleteProfile(int userId)
         {
             var response = await profileService.DeleteProfileAsync(userId);

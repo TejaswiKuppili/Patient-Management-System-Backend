@@ -215,7 +215,7 @@ namespace PatientManagementSystem.Services
                 var profile = await profileRepository.GetByUserIdAsync(profileDto.ApplicationUserId);
                 if (profile == null)
                 {
-                    return ApiResponseHelper.Fail<ProfileDto?>("Profile not found.", ResponseConstants.NotFound);
+                    return await CreateProfileAsync(profileDto);
                 }
 
                 profile.DateOfBirth = profileDto.DateOfBirth;
