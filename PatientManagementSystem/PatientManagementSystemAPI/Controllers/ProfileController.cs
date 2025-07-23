@@ -42,7 +42,7 @@ namespace PatientManagementSystemAPI.Controllers
         /// <summary>
         /// Update an existing profile
         /// </summary>
-        [HttpPut("me")]
+        [HttpPut("me/update")]
         public async Task<IActionResult> UpdateProfile([FromBody] ProfileDto profileDto)
         {
             if (!ModelState.IsValid)

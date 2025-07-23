@@ -66,10 +66,17 @@ namespace PatientManagementSystem.Repository
                 Username = newUser.Name,
                 Email = newUser.Email,
                 PasswordHash = newUser.Password,
-                RoleId = role?.RoleId
+                RoleId = role?.RoleId,
+                
             };
-
             context.ApplicationUsers.Add(user);
+            await context.SaveChangesAsync();
+            Profile profile = new Profile
+            {
+                ApplicationUserId = user.Id
+
+            };
+            context.Profiles.Add(profile);
             await context.SaveChangesAsync();
         }
 
@@ -78,7 +85,7 @@ namespace PatientManagementSystem.Repository
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="newRoleName"></param>
-       
+
         /// <exception cref="Exception"></exception>
         public async Task UpdateUserRoleAsync(int userId, string newRoleName)
         {

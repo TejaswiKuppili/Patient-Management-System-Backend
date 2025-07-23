@@ -1,4 +1,6 @@
-﻿namespace PatientManagementSystem.Common.Constants
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace PatientManagementSystem.Common.Constants
 {
     /// <summary>
     /// Defines constant integer values for common HTTP status codes and string messages for API responses.
@@ -155,5 +157,27 @@
         /// Message indicating that deleting an appointment failed.
         /// </summary>
         public const string AppointmentDeleteFailedMessage = "Failed to delete appointment.";
+
+        ///<summary>
+        ///Message indicating that Profile has been created succesfully.
+        /// </summary>
+        public const string ProfileCreatedSuccessMessage = "Profile created successfully.";
+
+       
+        /// <summary>Returned when profile is updated successfully.</summary>
+        public const string ProfileUpdatedSuccessMessage = "Profile updated successfully.";
+
+        /// <summary>Returned when profile is deleted successfully.</summary>
+        public const string ProfileDeletedSuccessMessage = "Profile deleted successfully.";
+
+        /// <summary>Returned when profile is fetched successfully.</summary>
+        public const string ProfileFetchedSuccessMessage = "Profile retrieved successfully.";
+
+        /// <summary>Returned when profile operation fails (generic).</summary>
+        public const string ProfileOperationFailedMessage = "Profile operation failed.";
+
+        /// <summary>Returned when a requested profile is not found in the system.</summary>
+        public const string ProfileNotFoundMessage = "Profile not found.";
+
     }
 }
