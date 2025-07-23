@@ -71,6 +71,7 @@ namespace PatientManagementSystem.Repository
             };
             context.ApplicationUsers.Add(user);
             await context.SaveChangesAsync();
+            //so that the application user has been saved before we attempt to dave it in profile table
             Profile profile = new Profile
             {
                 ApplicationUserId = user.Id

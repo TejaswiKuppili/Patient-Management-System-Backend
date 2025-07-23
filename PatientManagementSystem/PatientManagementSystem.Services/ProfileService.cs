@@ -30,21 +30,24 @@ namespace PatientManagementSystem.Services
                 {
                     return ApiResponseHelper.Fail<ProfileDto?>(ResponseConstants.ProfileNotFoundMessage, ResponseConstants.NotFound);
                 }
-
+                string[] nameParts = profile.ApplicationUser.Username.Split(' ');
+                
                 ProfileDto dto = new ProfileDto
                 {
                     Id = profile.Id,
                     City = profile.City,
                     CityState = profile.CityState,
                     Country = profile.Country,
-                    FirstName = profile.ApplicationUser?.Username,
+                    FirstName = nameParts.FirstOrDefault() ?? "",
+                    LastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "",
                     ApplicationUserId = profile.ApplicationUserId,
                     DateOfBirth = profile.DateOfBirth,
                     Gender = profile.Gender,
                     PhoneNumber = profile.PhoneNumber,
                     Bio = profile.Bio,
                     Address = profile.Address,
-                    ProfilePicture = profile.ProfilePicture
+                    ProfilePicture = profile.ProfilePicture,
+                    Email = profile.ApplicationUser.Email
                 };
 
                 return ApiResponseHelper.Success(dto, ResponseConstants.ProfileFetchedSuccessMessage);

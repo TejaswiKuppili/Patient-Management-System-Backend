@@ -25,20 +25,7 @@ namespace PatientManagementSystem.Common.Helpers
                 Message= message
             };
         }
-        ///// <summary>
-        ///// Creates a successful API response with message
-        ///// </summary>
-        ///// <param name="message"></param>
-        ///// <returns></returns>
-        //public static ApiResponse<string> Success(string message)
-        //{
-        //    return new ApiResponse<string>
-        //    {
-        //        Success = true,
-        //        StatusCode = ResponseConstants.Success,
-        //        Message = message
-        //    };
-        //}
+
 
         /// <summary>
         /// Creates a failed API response with a specified message and status code.

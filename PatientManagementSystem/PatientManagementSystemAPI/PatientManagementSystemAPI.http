@@ -104,17 +104,16 @@ GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/{{userId}}
 
 ###
 @id=1
-PUT {{PatientManagementSystemAPI_HostAddress}}/api/patient/Update
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/patient/me
 Content-Type: application/json
 
 {
-  "id": 1,
-  "applicationUserId": 1,
+  
+  "applicationUserId": 18,
 
-  "dateOfBirth": "2000-01-01T00:00:00",
+  "dateOfBirth": "2000-01-01T00:00:00"
 
-  "firstName": "Aditya Malluvalasa",
-  "email": "adithya@c9.com"
+  
 }
 ###
 
@@ -133,31 +132,21 @@ Content-Type: application/json
 
 ###
 
-PUT {{PatientManagementSystemAPI_HostAddress}}/Update
-Content-Type: application/json
 
-{
-  //ProfileDto
-}
-
-###
-
-PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/update
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/me
 Content-Type: application/json
 
 
 {
-  "id": 1,
-  "applicationUserId": 1,
 
-  "dateOfBirth": "2000-01-01T00:00:00",
+  "applicationUserId": 18,
 
-  "firstName": "Aditya Malluvalasa",
-  "email": "adithya@c9.com"
+  "dateOfBirth": "2000-01-01T00:00:00"
+
 }
 
 ###
 
-GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/{{userId}}
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/3
 
 ###
