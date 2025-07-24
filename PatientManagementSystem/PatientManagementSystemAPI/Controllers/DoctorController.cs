@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PatientManagementSystem.Common.DTOs;
-using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 namespace PatientManagementSystem.Controllers
 {

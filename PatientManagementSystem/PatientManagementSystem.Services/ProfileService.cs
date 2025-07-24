@@ -7,6 +7,7 @@ using PatientManagementSystem.Repository.Interfaces;
 using PatientManagementSystem.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PatientManagementSystem.Services
 {
@@ -42,6 +43,7 @@ namespace PatientManagementSystem.Services
                     LastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "",
                     ApplicationUserId = profile.ApplicationUserId,
                     DateOfBirth = profile.DateOfBirth,
+                    
                     Gender = profile.Gender,
                     PhoneNumber = profile.PhoneNumber,
                     Bio = profile.Bio,
@@ -49,6 +51,7 @@ namespace PatientManagementSystem.Services
                     ProfilePicture = profile.ProfilePicture,
                     Email = profile.ApplicationUser.Email
                 };
+                dto.Date = dto.DateOfBirth?.ToString("yyyy-MM-dd") ?? "";
 
                 return ApiResponseHelper.Success(dto, ResponseConstants.ProfileFetchedSuccessMessage);
             }
@@ -99,7 +102,7 @@ namespace PatientManagementSystem.Services
                 {
                     return await CreateProfileAsync(profileDto);
                 }
-
+                profile.ApplicationUser.Username = profileDto.FirstName + " " + profileDto.LastName;
                 profile.DateOfBirth = profileDto.DateOfBirth;
                 profile.Gender = profileDto.Gender;
                 profile.PhoneNumber = profileDto.PhoneNumber;

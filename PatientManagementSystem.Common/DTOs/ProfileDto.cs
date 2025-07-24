@@ -2,7 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace PatientManagementSystem.Common.DTOs
-{
+{   /// <summary>
+/// Data transfer objects for profile table
+/// </summary>
     public class ProfileDto
     {
        
@@ -16,7 +18,7 @@ namespace PatientManagementSystem.Common.DTOs
 
 
         public DateTime? DateOfBirth { get; set; }
-
+        public string Date { get; set; }
 
         [MaxLength(10)]
         public string? Gender { get; set; } = null!;
