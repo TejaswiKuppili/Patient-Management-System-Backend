@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PatientManagementSystem.Common.DTOs
+﻿namespace PatientManagementSystem.Common.DTOs
 {
     /// <summary>
     /// Data Transfer Object for Appointment

@@ -248,7 +248,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.ProfileController",
     "Method": "CreateProfile",
-    "RelativePath": "api/Profile",
+    "RelativePath": "api/Profile/me",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -263,24 +263,8 @@
   },
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.ProfileController",
-    "Method": "UpdateProfile",
-    "RelativePath": "api/Profile",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profileDto",
-        "Type": "PatientManagementSystem.Common.DTOs.ProfileDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PatientManagementSystemAPI.Controllers.ProfileController",
     "Method": "GetProfile",
-    "RelativePath": "api/Profile/{userId}",
+    "RelativePath": "api/Profile/me/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -296,7 +280,7 @@
   {
     "ContainingType": "PatientManagementSystemAPI.Controllers.ProfileController",
     "Method": "DeleteProfile",
-    "RelativePath": "api/Profile/{userId}",
+    "RelativePath": "api/Profile/me/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -304,6 +288,22 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PatientManagementSystemAPI.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Profile/me/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileDto",
+        "Type": "PatientManagementSystem.Common.DTOs.ProfileDto",
         "IsRequired": true
       }
     ],

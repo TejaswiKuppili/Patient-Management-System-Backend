@@ -55,7 +55,7 @@ GET {{PatientManagementSystemAPI_HostAddress}}/api/patient/getAllPatients
 
 ###
 
-DELETE {{PatientManagementSystemAPI_HostAddress}}/api/appointment/{{id}}
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/appointment/delete/32
 
 ###
 
@@ -141,12 +141,63 @@ Content-Type: application/json
 
   "applicationUserId": 18,
 
-  "dateOfBirth": "2000-01-01T00:00:00"
+  "dateOfBirth": "2003-01-01T00:00:00"
 
 }
 
 ###
 
-GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/3
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/46
+
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/update
+Content-Type: application/json
+
+{
+
+  "applicationUserId": 45,
+"firstName":"Pranav",
+"lastName":"thoutam"
+
+}
+
+###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/{{userId}}
+
+###
+
+DELETE {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/{{userId}}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/appointment
+Content-Type: application/json
+
+{
+  //AppointmentDto
+}
+
+###
+
+@patientId=0
+GET {{PatientManagementSystemAPI_HostAddress}}/api/vital/getVitals/{{patientId}}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/vital/addVitals
+Content-Type: application/json
+
+{
+  //VitalDto
+}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/appointment
+Content-Type: application/json
+
+{"doctorId":1052,"patientId":27,"appointmentStartTime":"2025-07-27T01:00:00+05:30","appointmentEndTime":"2025-07-27T01:30:00+05:30","createdBy":"1048"}
 
 ###

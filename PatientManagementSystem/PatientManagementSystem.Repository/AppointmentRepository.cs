@@ -78,5 +78,20 @@ namespace PatientManagementSystem.Repository
             context.Appointments.Remove(appointment);
             await context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Retrieves appointments for a specific patient by ID.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<Appointment>> GetAppointmentsByPatientIdAsync(int patientId)
+        {
+            return await context.Appointments
+                .Include(a => a.Doctor)
+                .Include(a => a.Patient)
+                .Where(a => a.PatientId == patientId)
+                .ToListAsync();
+        }
+
     }
 }

@@ -93,12 +93,37 @@ namespace PatientManagementSystem.Common.Services
         {
             try
             {
+                // Fetch appointments for doctor and patient
+                IEnumerable<Appointment>? doctorAppointments = await AppointmentRepository.GetByDoctorIdAsync(appointment.DoctorId);
+                IEnumerable<Appointment>? patientAppointments = await AppointmentRepository.GetAppointmentsByPatientIdAsync(appointment.PatientId);
+
+             
+                
+
+                // Check for any overlaps
+                bool doctorConflict = doctorAppointments.Any(a =>
+                    IsOverlapping(a.AppointmentStartTime, a.AppointmentEndTime,
+                                  appointment.AppointmentStartTime, appointment.AppointmentEndTime));
+
+                bool patientConflict = patientAppointments.Any(a =>
+                    IsOverlapping(a.AppointmentStartTime, a.AppointmentEndTime,
+                                  appointment.AppointmentStartTime, appointment.AppointmentEndTime));
+
+                if (doctorConflict || patientConflict)
+                {
+                    string message = doctorConflict
+                        ? "The doctor already has another appointment during this time."
+                        : "The patient already has another appointment during this time.";
+
+                    return ApiResponseHelper.Fail<string>(message, ResponseConstants.BadRequest);
+                }
+
+                // No conflicts, create new appointment
                 Appointment? entity = new Appointment
                 {
                     PatientId = appointment.PatientId,
                     AppointmentStartTime = appointment.AppointmentStartTime,
                     AppointmentEndTime = appointment.AppointmentEndTime,
-                    
                     Status = string.IsNullOrWhiteSpace(appointment.Status) ? "Scheduled" : appointment.Status,
                     CreatedAt = DateTime.Now,
                     CreatedBy = appointment.CreatedBy,
@@ -107,7 +132,7 @@ namespace PatientManagementSystem.Common.Services
 
                 await AppointmentRepository.AddAsync(entity);
 
-                return ApiResponseHelper.Success<string?>(null,ResponseConstants.AppointmentAddedMessage);
+                return ApiResponseHelper.Success<string?>(null, ResponseConstants.AppointmentAddedMessage);
             }
             catch (Exception ex)
             {
@@ -116,6 +141,7 @@ namespace PatientManagementSystem.Common.Services
                     ResponseConstants.InternalServerError);
             }
         }
+
         /// <summary>
         /// Updates an existing appointment with the provided details.
         /// </summary>
@@ -172,6 +198,10 @@ namespace PatientManagementSystem.Common.Services
                     $"{ResponseConstants.AppointmentDeleteFailedMessage}: {ex.Message}",
                     ResponseConstants.InternalServerError);
             }
+        }
+        bool IsOverlapping(DateTime start1, DateTime end1, DateTime start2, DateTime end2)
+        {
+            return start1 < end2 && start2 < end1;
         }
     }
 }
