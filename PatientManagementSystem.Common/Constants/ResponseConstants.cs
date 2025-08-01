@@ -46,8 +46,8 @@ namespace PatientManagementSystem.Common.Constants
         /// <summary>
         /// A generic error message prefix.
         /// </summary>
-        public const string GenericErrorMessage = "An error occurred: ";
-
+        public const string GenericErrorMessage = "An error occurred ";
+        public const string SqlErrorMessage = "An error occurred ";
         /// <summary>
         /// Bad Request: Message for inavlid request body
         /// </summary>

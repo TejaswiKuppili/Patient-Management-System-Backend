@@ -79,7 +79,7 @@ namespace PatientManagementSystem.Services
             {
                 logger.LogError(ex, "Error creating user.");
                 return ApiResponseHelper.Fail<string>(
-                    $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
+                    $"{ResponseConstants.SqlErrorMessage}",
                     ResponseConstants.InternalServerError
                 );
             }
