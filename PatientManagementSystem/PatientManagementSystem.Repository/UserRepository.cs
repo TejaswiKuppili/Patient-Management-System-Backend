@@ -161,6 +161,11 @@ namespace PatientManagementSystem.Repository
 
             return true;
         }
+        // UserRepository.cs
+        public async Task<bool> UserExistsAsync(string email)
+        {
+            return await context.ApplicationUsers.AnyAsync(u => u.Email == email);
+        }
 
     }
 }

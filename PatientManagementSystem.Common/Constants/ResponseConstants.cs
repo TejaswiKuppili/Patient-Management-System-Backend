@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Net;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PatientManagementSystem.Common.Constants
 {
@@ -10,17 +11,17 @@ namespace PatientManagementSystem.Common.Constants
         /// <summary>
         /// Represents the HTTP 404 Not Found status code.
         /// </summary>
-        public const int NotFound = 404;
+        public const int NotFound = (int)HttpStatusCode.NotFound;
 
         /// <summary>
         /// Represents the HTTP 500 Internal Server Error status code.
         /// </summary>
-        public const int InternalServerError = 500;
+        public const int InternalServerError = (int)HttpStatusCode.InternalServerError;
 
         /// <summary>
         /// Represents the HTTP 200 Success status code.
         /// </summary>
-        public const int Success = 200;
+        public const int Success = (int)HttpStatusCode.OK;
 
         /// <summary>
         /// Message indicating that User account has been created 
@@ -60,12 +61,12 @@ namespace PatientManagementSystem.Common.Constants
         /// <summary>
         /// Bad Request
         /// </summary>
-        public const int BadRequest = 400;
+        public const int BadRequest = (int)HttpStatusCode.BadRequest;
 
         /// <summary>
         /// Bad Request: UnAuthorized status code
         /// </summary>
-        public const int UnAuthorized = 401;
+        public const int UnAuthorized = (int)HttpStatusCode.Unauthorized;
 
 
         /// <summary>
@@ -178,6 +179,7 @@ namespace PatientManagementSystem.Common.Constants
 
         /// <summary>Returned when a requested profile is not found in the system.</summary>
         public const string ProfileNotFoundMessage = "Profile not found.";
+        public const string EmailExists = "This user already exists";
 
     }
 }

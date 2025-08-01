@@ -14,6 +14,7 @@ namespace PatientManagementSystem.Repository.Interfaces
         Task<ApplicationUser?> GetUserDetailsAsync(int userId);
         Task UpdateUserRoleAsync(int userId, string newRoleName);
         Task<bool> DeleteUserAsync(int userId);
+        Task<bool> UserExistsAsync(string email);
 
     }
 

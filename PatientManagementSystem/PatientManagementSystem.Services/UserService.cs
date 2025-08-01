@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Logging;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
 using PatientManagementSystem.Common.Helpers;
@@ -58,19 +59,31 @@ namespace PatientManagementSystem.Services
         {
             try
             {
+                bool userExists = await userRepository.UserExistsAsync(userDetails.Email);
+
+                if (userExists)
+                {
+                    logger.LogWarning("Attempt to register with already existing email: {email}", userDetails.Email);
+                    return ApiResponseHelper.Fail<string>(
+                        ResponseConstants.EmailExists,
+                        ResponseConstants.BadRequest 
+                    );
+                }
+
                 userDetails.Password = PasswordHasher.HashPassword(userDetails.Password);
-
                 await userRepository.CreateUserAsync(userDetails);
-                return ApiResponseHelper.Success<string?>(null,ResponseConstants.CreatedUserMessage);
-            }
 
+                return ApiResponseHelper.Success<string?>(null, ResponseConstants.CreatedUserMessage);
+            }
             catch (Exception ex)
             {
+                logger.LogError(ex, "Error creating user.");
                 return ApiResponseHelper.Fail<string>(
                     $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
                     ResponseConstants.InternalServerError
                 );
             }
+
         }
         /// <summary>
         /// Updates the role of a user.
@@ -82,7 +95,7 @@ namespace PatientManagementSystem.Services
             try
             {
                 await userRepository.UpdateUserRoleAsync(userId, newRoleName);
-                return ApiResponseHelper.Success<string?>(null,ResponseConstants.RoleUpdatedMessage);
+                return ApiResponseHelper.Success<string?>(null, ResponseConstants.RoleUpdatedMessage);
             }
             catch (Exception ex)
             {
@@ -103,25 +116,26 @@ namespace PatientManagementSystem.Services
         /// <returns>ApplicationUser object if valid; otherwise null</returns>
         public async Task<UserDto?> ValidateUserAsync(string email, string password)
         {
-            try { 
-            // Await the result of the asynchronous call to get the user
-            UserDto? user = await userRepository.GetUserByEmailAsync(email);
-
-            if (user == null)
+            try
             {
-                logger.LogWarning("Login failed: email not found for {email}", email);
-                return null;
-            }
+                // Await the result of the asynchronous call to get the user
+                UserDto? user = await userRepository.GetUserByEmailAsync(email);
 
-            // Verify password
-            bool isValid = PasswordHasher.VerifyHashedPassword(user.Password, password);
-            if (!isValid)
-            {
-                logger.LogWarning("Login failed: invalid password for {email}", email);
-                return null;
-            }
+                if (user == null)
+                {
+                    logger.LogWarning("Login failed: email not found for {email}", email);
+                    return null;
+                }
 
-            return user;
+                // Verify password
+                bool isValid = PasswordHasher.VerifyHashedPassword(user.Password, password);
+                if (!isValid)
+                {
+                    logger.LogWarning("Login failed: invalid password for {email}", email);
+                    return null;
+                }
+
+                return user;
             }
             catch (Exception ex)
             {
@@ -161,7 +175,7 @@ namespace PatientManagementSystem.Services
             }
             catch (Exception ex)
             {
-                
+
                 return ApiResponseHelper.Fail<UserIdResponseDto>(
                     $"{ResponseConstants.GenericErrorMessage}{ex.Message}",
                     ResponseConstants.InternalServerError
@@ -210,6 +224,7 @@ namespace PatientManagementSystem.Services
                 );
             }
         }
+
 
 
 
