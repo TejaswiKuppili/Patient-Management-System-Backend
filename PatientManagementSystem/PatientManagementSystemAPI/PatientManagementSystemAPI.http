@@ -201,3 +201,45 @@ Content-Type: application/json
 {"doctorId":1052,"patientId":27,"appointmentStartTime":"2025-07-27T01:00:00+05:30","appointmentEndTime":"2025-07-27T01:30:00+05:30","createdBy":"1048"}
 
 ###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"peadeep"
+}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/users/create
+Content-Type: application/json
+
+{
+  "name":"Pradeep",
+  "email":"pradeep@c9.com",
+  "password":"Pradeep123"
+}
+
+###
+
+POST {{PatientManagementSystemAPI_HostAddress}}/api/users/create
+Content-Type: application/json
+
+{
+    "name": "SuryaKarki",
+    "email": "suryakarki2@c9.com",
+    "password": "Suryakarki12"
+}
+
+###
+
+PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/update
+Content-Type: application/json
+
+{
+  "applicationUserId": 1062
+
+
+}
+
+###

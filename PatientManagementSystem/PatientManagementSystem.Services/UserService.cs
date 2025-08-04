@@ -70,6 +70,7 @@ namespace PatientManagementSystem.Services
                     );
                 }
 
+
                 userDetails.Password = PasswordHasher.HashPassword(userDetails.Password);
                 await userRepository.CreateUserAsync(userDetails);
 
