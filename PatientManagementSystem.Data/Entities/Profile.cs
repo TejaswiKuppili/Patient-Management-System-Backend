@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
-
+using PatientManagementSystem.Common.Enums;
 namespace PatientManagementSystem.Data.Entities
     {
         public class Profile
@@ -20,7 +20,7 @@ namespace PatientManagementSystem.Data.Entities
             public DateTime? DateOfBirth { get; set; }
 
             [MaxLength(10)]
-            public string? Gender { get; set; } = null!;
+            public Gender? Gender { get; set; } = null!;
 
             [MaxLength(20)]
             public string? PhoneNumber { get; set; }

@@ -5,8 +5,9 @@
     /// </summary>
     public enum Gender
     {
-        Male,
-        Female,
-        Other
+        Male = 1,
+        Female = 2,
+        Other = 3
     }
+
 }

@@ -1,6 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
-
+using System.Diagnostics.CodeAnalysis;
+using PatientManagementSystem.Common.Enums;
 namespace PatientManagementSystem.Common.DTOs
 {   /// <summary>
 /// Data transfer objects for profile table
@@ -9,7 +10,7 @@ namespace PatientManagementSystem.Common.DTOs
     {
        
         public int Id { get; set; }
-
+        [Required]
         
         public int ApplicationUserId { get; set; }
 
@@ -18,10 +19,11 @@ namespace PatientManagementSystem.Common.DTOs
 
 
         public DateTime? DateOfBirth { get; set; }
-        public string Date { get; set; }
+        [AllowNull]
+        public string? Date { get; set; }
 
         [MaxLength(10)]
-        public string? Gender { get; set; } = null!;
+        public Gender? Gender { get; set; } = null!;
 
         [MaxLength(20)]
         public string? PhoneNumber { get; set; }
@@ -41,6 +43,8 @@ namespace PatientManagementSystem.Common.DTOs
         public string FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
+
+        public Dictionary<int, string>? GenderOptions { get; set; }
     }
 }
 

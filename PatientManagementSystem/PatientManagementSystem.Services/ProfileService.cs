@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Common.Enums;
 using PatientManagementSystem.Common.Helpers;
 using PatientManagementSystem.Data.Entities;
 using PatientManagementSystem.Repository.Interfaces;
@@ -31,9 +32,10 @@ namespace PatientManagementSystem.Services
                 {
                     return ApiResponseHelper.Fail<ProfileDto?>(ResponseConstants.ProfileNotFoundMessage, ResponseConstants.NotFound);
                 }
+
                 string[] nameParts = profile.ApplicationUser.Username.Split(' ');
-                
-                ProfileDto dto = new ProfileDto
+
+                var dto = new ProfileDto
                 {
                     Id = profile.Id,
                     City = profile.City,
@@ -43,15 +45,19 @@ namespace PatientManagementSystem.Services
                     LastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "",
                     ApplicationUserId = profile.ApplicationUserId,
                     DateOfBirth = profile.DateOfBirth,
-                    
                     Gender = profile.Gender,
                     PhoneNumber = profile.PhoneNumber,
                     Bio = profile.Bio,
                     Address = profile.Address,
                     ProfilePicture = profile.ProfilePicture,
-                    Email = profile.ApplicationUser.Email
+                    Email = profile.ApplicationUser.Email,
+                    Date = profile.DateOfBirth?.ToString("yyyy-MM-dd")
                 };
-                dto.Date = dto.DateOfBirth?.ToString("yyyy-MM-dd") ?? "";
+
+
+                dto.GenderOptions = Enum.GetValues(typeof(Gender))
+                    .Cast<Gender>()
+                    .ToDictionary(g => (int)g, g => g.ToString());
 
                 return ApiResponseHelper.Success(dto, ResponseConstants.ProfileFetchedSuccessMessage);
             }
@@ -61,6 +67,7 @@ namespace PatientManagementSystem.Services
                 return ApiResponseHelper.Fail<ProfileDto?>($"{ResponseConstants.GenericErrorMessage}{ex.Message}", ResponseConstants.InternalServerError);
             }
         }
+
 
         public async Task<ApiResponse<ProfileDto?>> CreateProfileAsync(ProfileDto profileDto)
         {
@@ -111,7 +118,7 @@ namespace PatientManagementSystem.Services
                 profile.City = profileDto.City;
                 profile.CityState = profileDto.CityState;
                 profile.Country = profileDto.Country;
-
+                
                 if (profileDto.ProfilePicture != null)
                 {
                     profile.ProfilePicture = profileDto.ProfilePicture;
