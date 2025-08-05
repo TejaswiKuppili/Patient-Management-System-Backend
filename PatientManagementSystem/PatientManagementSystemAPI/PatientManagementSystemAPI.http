@@ -237,9 +237,21 @@ PUT {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/update
 Content-Type: application/json
 
 {
-  "applicationUserId": 1062
+   "applicationUserId": 1048,
 
+    "phoneNumber": "9887654321",
+    "bio": "I am ceo",
+    "address": "Pragathi nagar",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "firstName": "Pradeep",
+    "lastName": "Pavuluri"
 
 }
+
+###
+
+GET {{PatientManagementSystemAPI_HostAddress}}/api/profile/me/1048
 
 ###

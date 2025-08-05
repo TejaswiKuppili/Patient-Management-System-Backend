@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PatientManagementSystem.Common\PatientManagementSystem.Common.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -39,7 +39,7 @@ namespace PatientManagementSystem.Services
                 {
                     Id = profile.Id,
                     City = profile.City,
-                    CityState = profile.CityState,
+                    State = profile.CityState,
                     Country = profile.Country,
                     FirstName = nameParts.FirstOrDefault() ?? "",
                     LastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "",
@@ -83,7 +83,7 @@ namespace PatientManagementSystem.Services
                     Address = profileDto.Address,
                     ProfilePicture = profileDto.ProfilePicture,
                     City = profileDto.City,
-                    CityState = profileDto.CityState,
+                    CityState = profileDto.State,
                     Country = profileDto.Country
                 };
 
@@ -116,7 +116,7 @@ namespace PatientManagementSystem.Services
                 profile.Bio = profileDto.Bio;
                 profile.Address = profileDto.Address;
                 profile.City = profileDto.City;
-                profile.CityState = profileDto.CityState;
+                profile.CityState = profileDto.State;
                 profile.Country = profileDto.Country;
                 
                 if (profileDto.ProfilePicture != null)

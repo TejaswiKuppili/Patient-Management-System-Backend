@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PatientManagementSystem.Common.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatientManagementSystem.Data.Entities
@@ -23,7 +24,7 @@ namespace PatientManagementSystem.Data.Entities
         public DateOnly DateOfBirth { get; set; } // DATE, NOT NULL
 
 
-        public string Gender { get; set; } = null!; // NVARCHAR(10), NOT NULL
+        public Gender? Gender { get; set; } = null!; // NVARCHAR(10), NOT NULL
 
         [Required]
         [MaxLength(20)]

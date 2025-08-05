@@ -36,7 +36,7 @@ namespace PatientManagementSystem.Common.DTOs
 
         public string? City { get; set; }
 
-        public string? CityState { get; set; }
+        public string? State { get; set; }
 
         public string? Country { get; set; }
         [Required]

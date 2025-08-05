@@ -1,5 +1,6 @@
 ﻿using PatientManagementSystem.Common.Constants;
 using PatientManagementSystem.Common.DTOs;
+using PatientManagementSystem.Common.Enums;
 using PatientManagementSystem.Common.Helpers;
 using PatientManagementSystem.Data.Entities;
 using PatientManagementSystem.Repository.Interfaces;
@@ -41,7 +42,7 @@ namespace PatientManagementSystem.Services
                     ReasonForVisit = p.ReasonForVisit,
                     CreatedByEmployeeName = p.CreatedByEmployee != null ? p.CreatedByEmployee.Username : "Unknown"
                 }).ToList();
-
+                
                 return ApiResponseHelper.Success(result, ResponseConstants.PatientsFetchedMessage);
             }
             catch (Exception ex)
@@ -75,7 +76,9 @@ namespace PatientManagementSystem.Services
                     ReasonForVisit = patient.ReasonForVisit,
                     CreatedByEmployeeName = patient.CreatedByEmployee?.Username
                 };
-
+                dto.GenderOptions = Enum.GetValues(typeof(Gender))
+    .Cast<Gender>()
+    .ToDictionary(g => (int)g, g => g.ToString());
                 return ApiResponseHelper.Success<PatientDto?>(dto, ResponseConstants.PatientsFetchedMessage);
                
             }
