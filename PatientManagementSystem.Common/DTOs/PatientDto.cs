@@ -11,6 +11,7 @@ namespace PatientManagementSystem.Common.DTOs
         public string LastName { get; set; } = null!;
         public DateOnly DateOfBirth { get; set; }
         public Gender? Gender { get; set; } = null!;
+        public string? GenderText { get; set; } = null;
         public string ContactNumber { get; set; } = null!;
         public string? Address { get; set; }
         public DateTime CreatedAt { get; set; }

@@ -77,7 +77,7 @@ namespace PatientManagementSystem.Services
                 {
                     ApplicationUserId = profileDto.ApplicationUserId,
                     DateOfBirth = profileDto.DateOfBirth,
-                    Gender = profileDto.Gender,
+                    Gender = profileDto.Gender ,   
                     PhoneNumber = profileDto.PhoneNumber,
                     Bio = profileDto.Bio,
                     Address = profileDto.Address,

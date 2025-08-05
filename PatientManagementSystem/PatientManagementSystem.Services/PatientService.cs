@@ -35,6 +35,7 @@ namespace PatientManagementSystem.Services
                     LastName = p.LastName,
                     DateOfBirth = p.DateOfBirth,
                     Gender = p.Gender,
+                    GenderText = p.Gender.ToString(),
                     ContactNumber = p.ContactNumber,
                     Address = p.Address,
                     CreatedAt = p.CreatedAt,
